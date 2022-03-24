@@ -2,11 +2,10 @@ import './App.css';
 import Footer from './components/Layout/Footer';
 import Home from './components/Layout/Home';
 import Nav from './components/Navigation/Nav';
-import {BrowserRouter, Routes, Route, useParams} from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Place from './components/Layout/Place';
 
 function App() {
-  const { id } = useParams();
   return (
     <div className="App">
        <BrowserRouter>
