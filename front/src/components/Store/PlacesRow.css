@@ -1,0 +1,23 @@
+.rowContainer {
+    margin-bottom: 50px;
+}
+
+.rowContent {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly
+}
+
+.rowContent .rowDesc {
+    display: flex;
+}
+
+.rowContent .placesRow {
+    width: 500px;
+    height: 400px;
+    margin: 0px 15px;
+}
+
+.rowContent .styleText {
+    
+}
