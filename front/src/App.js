@@ -8,17 +8,17 @@ import Place from './components/Layout/Place';
 function App() {
   return (
     <div className="App">
-      <Nav />
        <BrowserRouter>
 
+        <Nav />
         <Routes>
          <Route path="/" element={<Home/>}> </Route> 
          <Route path="/Layout/Place" element={<Place/>}> </Route>
         </Routes>
 
+      <Footer></Footer>
       </BrowserRouter>
 
-      <Footer></Footer>
     </div>
   );
 }

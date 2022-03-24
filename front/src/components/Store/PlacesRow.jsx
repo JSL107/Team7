@@ -23,7 +23,7 @@ const PlacesRow = (props) => {
                 <img className='placesRow' src="https://cdn.pixabay.com/photo/2016/10/06/17/28/architecture-1719526_960_720.jpg"/>
             </a>
             
-            {/*<img className='placesRow' src="https://cdn.pixabay.com/photo/2016/10/06/17/28/architecture-1719526_960_720.jpg"/>*/}
+            {/* <img className='placesRow' src="https://cdn.pixabay.com/photo/2016/10/06/17/28/architecture-1719526_960_720.jpg"/> */}
           
 
         </div>

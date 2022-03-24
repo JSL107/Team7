@@ -4,15 +4,16 @@ import SearchIcon from '@mui/icons-material/Search';
 import DehazeIcon from '@mui/icons-material/Dehaze';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LanguageIcon from '@mui/icons-material/Language';
-
+import image from '../Navigation/images/homelogo.png';
 
 const Nav = () => {
   return (
     <div className='navicontainer'>
-      <img className="storeTitle"
+      <a href='/'>
+        <img className="storeTitle"
         //src="https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png"
-        src="/images/homelogo.png" alt="Seven stay title"/>
-
+        src={image} alt="Seven stay title"/>
+      </a>
 
       {/* 네비게이션 예약 부분*/}
       <div className='naviCenter'>
