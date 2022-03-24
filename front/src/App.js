@@ -1,23 +1,22 @@
 import './App.css';
-import Nav from './components/Navigation/Nav'
-import Home from './components/Layout/Home';
-import Main from './components/Layout/Main'
 import Footer from './components/Layout/Footer';
+import Home from './components/Layout/Home';
+import Nav from './components/Navigation/Nav';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Place from './components/Layout/Place';
 
 function App() {
   return (
     <div className="App">
       <Nav />
-      <Home/>
+       <BrowserRouter>
 
-       {/*<BrowserRouter>
         <Routes>
-         {/* <Route path="/" element={Home} exact ></Route> */}
-          {/* <Link to="/">Home</Link> */}
-           {/* <Route path="/" component={Home} exact></Route>
-          <Route path="/place" component={Place}></Route>
+         <Route path="/" element={<Home/>}> </Route> 
+         <Route path="/Layout/Place" element={<Place/>}> </Route>
         </Routes>
-      </BrowserRouter>*/}
+
+      </BrowserRouter>
 
       <Footer></Footer>
     </div>
