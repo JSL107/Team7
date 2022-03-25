@@ -1,16 +1,13 @@
-import React, { useState } from 'react'
-import './Nav.css'
-import SearchIcon from '@mui/icons-material/Search';
-import DehazeIcon from '@mui/icons-material/Dehaze';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import DehazeIcon from '@mui/icons-material/Dehaze';
 import LanguageIcon from '@mui/icons-material/Language';
+import SearchIcon from '@mui/icons-material/Search';
+import React from 'react';
 import image from '../Navigation/images/homelogo.png';
-import DatePicker from 'react-datepicker';
 import Calender from './Calender';
+import './Nav.css';
 
 const Nav = (props) => {
-  const [startDate, setStartDate] = useState(new Date());
-  console.log(props);
   return (
     <div className='navicontainer'>
       <a href='/'>
@@ -38,7 +35,7 @@ const Nav = (props) => {
 
         <div className='naviContent'>
         <div className='naviCheckout'>체크아웃</div>
-        <div className="naviDate"><Calender /></div>
+        <div className="naviDate"></div>
         </div>
 
         <div className="naviLine" />
