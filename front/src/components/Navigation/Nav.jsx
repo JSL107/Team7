@@ -2,13 +2,19 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import DehazeIcon from '@mui/icons-material/Dehaze';
 import LanguageIcon from '@mui/icons-material/Language';
 import SearchIcon from '@mui/icons-material/Search';
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import image from '../Navigation/images/7stay.png';
+=======
+import React, {useState } from 'react';
+import image from '../Navigation/images/homelogo.png';
+>>>>>>> 5d6ac59dafbf5ef724367953b31955f0bc10f066
 import Calender from './Calender';
 import Modal from './Modal';
 import './Nav.css';
 
 const Nav = () => {
+<<<<<<< HEAD
 
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -18,6 +24,22 @@ const Nav = () => {
   const closeModal = () => {
     setModalOpen(false);
   };
+=======
+  // const element1= document.getElementsByTagName("div")[15];
+  // console.log(element1);
+  // const datepicker2 = document.getElementById('datepicker2');
+  const aaa = document.getElementById({Calender});
+  console.log(aaa);
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+      const openModal = () => {
+        setModalOpen(true);
+      };
+      const closeModal = () => {
+        setModalOpen(false);
+      };
+>>>>>>> 5d6ac59dafbf5ef724367953b31955f0bc10f066
 
   return (
 
@@ -35,8 +57,13 @@ const Nav = () => {
         </div>
 
         <div className="naviLine" />
+<<<<<<< HEAD
 
         <div className='naviContent' id="navi2">
+=======
+        
+        <div className='naviContent' id="navi2">        
+>>>>>>> 5d6ac59dafbf5ef724367953b31955f0bc10f066
           <Calender />
         </div>
         <div className="naviLine" />

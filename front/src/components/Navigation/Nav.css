@@ -29,7 +29,11 @@
     text-align: center;
     white-space: nowrap;
 
+<<<<<<< HEAD
     width : 270px;
+=======
+    width : 100px;
+>>>>>>> 5d6ac59dafbf5ef724367953b31955f0bc10f066
     height : 100px;
 }
 
