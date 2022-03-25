@@ -1,30 +1,59 @@
 import React, { useState } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import './Calender.css'
 
-const Calender = (props) => {
-    const [startDate, setStartDate] = useState(null);
-    const [endDate] = useState(null);
 
-//   const btn = () =>  {
-//     let money = hairprice*10000;
-//     alert(startDate.toLocaleString()+"에 " + {header}.header +"과정을 예약하셨습니다." + "\n금액은" + money.toLocaleString('en-AU') + "원 입니다.");
+const Calender = () => {
 
-//   }
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null)
 
-console.log(props);
   return (
-    <DatePicker
-    minDate={new Date()}
-    selected={startDate}
-    dateFormat="M월 d일"
-    onChange={(date) => {
-        setStartDate(date);
-    }}
-    disabledKeyboardNavigation
-    placeholderText="날짜 선택"
-    // excludeDates={[props(new Date(), 1), props(new Date(), 5)]}
-    />
+    
+    <div className="B">
+
+      <div className="C" id="in">
+        <div className='naviCheckin'>체크인</div>
+        <DatePicker
+          className='datepicker1'
+          id='dp'
+          selected={startDate}
+          minDate={new Date()}
+          maxDate={endDate}
+          startDate={startDate}
+          endDate={endDate}
+          dateFormat="M월 d일"
+          onChange={(date) => { setStartDate(date); }}
+          selectsStart
+          isClearable={true}
+          placeholderText="날짜 선택"
+        />
+      </div>
+
+        <div className="naviLine" />
+
+      <div className="C" id="out">
+        <div className='naviCheckout'>체크아웃</div>
+        <div className="naviDate">
+        <DatePicker
+          className='datepicker2'
+          id='dp'
+          selected={endDate}
+          minDate={startDate}
+          startDate={startDate}
+          endDate={endDate}
+          dateFormat="M월 d일"
+          onChange={(date) => { setEndDate(date); }}
+          selectsEnd
+          isClearable={true}
+          placeholderText="날짜 선택"
+        />
+        </div>
+      </div>
+ 
+    </div>
+
   )
 
 }
