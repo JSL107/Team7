@@ -5,7 +5,7 @@ import DehazeIcon from '@mui/icons-material/Dehaze';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LanguageIcon from '@mui/icons-material/Language';
 import image from '../Navigation/images/homelogo.png';
-import DatePicker from 'react-datepicker';
+
 import Calender from './Calender';
 
 const Nav = (props) => {
