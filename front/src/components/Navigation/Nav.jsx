@@ -1,14 +1,9 @@
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import DehazeIcon from '@mui/icons-material/Dehaze';
 import LanguageIcon from '@mui/icons-material/Language';
-<<<<<<< HEAD
-import image from '../Navigation/images/homelogo.png';
-
-=======
 import SearchIcon from '@mui/icons-material/Search';
 import React, { useState } from 'react';
 import image from '../Navigation/images/7stay.png';
->>>>>>> abbedc8e07a0fe8d1f36a18d332e99e10496b7b1
 import Calender from './Calender';
 import Modal from './Modal';
 import './Nav.css';
