@@ -7,7 +7,13 @@ import image from '../Navigation/images/homelogo.png';
 import Calender from './Calender';
 import './Nav.css';
 
-const Nav = (props) => {
+const Nav = () => {
+  // const element1= document.getElementsByTagName("div")[15];
+  // console.log(element1);
+  // const datepicker2 = document.getElementById('datepicker2');
+const aaa = document.getElementById({Calender});
+console.log(aaa);
+
   return (
     <div className='navicontainer'>
       <a href='/'>
@@ -22,12 +28,19 @@ const Nav = (props) => {
           <div className='naviLocation'>위치</div>
           <input className="naviInput" placeholder='어디로 여행가세요?' />
         </div>
+        <div className="naviLine" />
+        
+        
+        
 
+        <div className='naviContent' id="navi2">        
+          <Calender />
+        </div>
         <div className="naviLine" />
 
-        <div className='naviContent'>
+        {/* <div className='naviContent'>
           <div className='naviCheckin'>체크인</div>
-          <div className="naviDate"><Calender /></div>
+          <div className="naviDate"></div>
         </div>
 
 
@@ -35,10 +48,10 @@ const Nav = (props) => {
 
         <div className='naviContent'>
         <div className='naviCheckout'>체크아웃</div>
-        <div className="naviDate"></div>
-        </div>
+        <div className="naviDate"><Calender /></div>
+        </div> 
 
-        <div className="naviLine" />
+        <div className="naviLine" />*/}
 
         <div className='naviContent' id="label4">
           <div className='naviGuest'>인원</div>
