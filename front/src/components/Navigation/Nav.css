@@ -10,31 +10,27 @@
     background-color:  #28B463;
     background-color:  #2C3E50  ; */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: sticky;
     top: 0;
     background-color: #273746;
     z-index: 100;
     width: 100%;
-    text-align: left;
-
+    /* text-align: left; */
 }
 
 /*Title*/
 .navicontainer .storeTitle {
     float: left;
     font-size: 30px;
-    margin: 25px 20px;
-    padding: 0 8px;
-    /* border: 5px solid rgb(30, 165, 77); 
-    color: #E74C3C;*/
+    margin: 15px 0 15px 100px;
     display: block;
     text-align: center;
     white-space: nowrap;
 
-    width : 200px;
-    height : 50px;
+    width : 270px;
+    height : 100px;
 }
 
 /*Navigation*/
@@ -62,7 +58,8 @@
     border-radius: 32px;
     overflow: hidden;
     align-items: center;
-    /*flex-wrap: wrap;*/
+    flex-wrap: wrap;
+    text-align: justify;
 }
 
 .naviContent {
@@ -73,7 +70,7 @@
     letter-spacing: 0.04px;
     border-radius: 32px;
     background-color: white;
-    /* width: 130px;*/
+    /* width: 150px; */
 }
 
 .naviContent#navi2 {
@@ -139,7 +136,7 @@
 .naviLang {
     cursor:pointer;
     border-radius: 2rem;
-    padding: 10px;
+    padding: 11px;
     display: flex;
     color: white;
 }
@@ -162,6 +159,11 @@
 
 .naviRb:hover {
     background-color: #FF385C;
+}
+
+.naviLang:hover {
+    background-color: rgba(185, 184, 184, 0.12);
+    border-radius: 32px;
 }
 
 .deha {
