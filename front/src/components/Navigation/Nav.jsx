@@ -1,42 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Nav.css'
 import SearchIcon from '@mui/icons-material/Search';
 import DehazeIcon from '@mui/icons-material/Dehaze';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LanguageIcon from '@mui/icons-material/Language';
 import image from '../Navigation/images/homelogo.png';
+import DatePicker from 'react-datepicker';
+import Calender from './Calender';
 
-const Nav = () => {
+const Nav = (props) => {
+  const [startDate, setStartDate] = useState(new Date());
+  console.log(props);
   return (
     <div className='navicontainer'>
       <a href='/'>
         <img className="storeTitle"
-        //src="https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png"
-        src={image} alt="Seven stay title"/>
+          //src="https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png"
+          src={image} alt="Seven stay title" />
       </a>
 
       {/* 네비게이션 예약 부분*/}
       <div className='naviCenter'>
         <div className='naviContent'>
           <div className='naviLocation'>위치</div>
-          <input className="naviInput" placeholder='어디로 여행가세요?'/>
+          <input className="naviInput" placeholder='어디로 여행가세요?' />
         </div>
 
-        <div className="naviLine"/>
+        <div className="naviLine" />
 
         <div className='naviContent'>
           <div className='naviCheckin'>체크인</div>
-          <div className="naviDate">날짜 입력</div>
+          <div className="naviDate"><Calender /></div>
         </div>
 
-        <div className="naviLine"/>
+
+        <div className="naviLine" />
 
         <div className='naviContent'>
-          <div className='naviCheckout'>체크아웃</div>
-          <div className="naviDate">날짜 입력</div>
+        <div className='naviCheckout'>체크아웃</div>
+        <div className="naviDate"><Calender /></div>
         </div>
 
-        <div className="naviLine"/>
+        <div className="naviLine" />
 
         <div className='naviContent' id="label4">
           <div className='naviGuest'>인원</div>
