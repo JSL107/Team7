@@ -2,17 +2,27 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import DehazeIcon from '@mui/icons-material/Dehaze';
 import LanguageIcon from '@mui/icons-material/Language';
 import SearchIcon from '@mui/icons-material/Search';
-import React from 'react';
+import React, {useState } from 'react';
 import image from '../Navigation/images/homelogo.png';
 import Calender from './Calender';
+import Modal from './Modal';
 import './Nav.css';
 
 const Nav = () => {
   // const element1= document.getElementsByTagName("div")[15];
   // console.log(element1);
   // const datepicker2 = document.getElementById('datepicker2');
-const aaa = document.getElementById({Calender});
-console.log(aaa);
+  const aaa = document.getElementById({Calender});
+  console.log(aaa);
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+      const openModal = () => {
+        setModalOpen(true);
+      };
+      const closeModal = () => {
+        setModalOpen(false);
+      };
 
   return (
     <div className='navicontainer'>
@@ -28,11 +38,9 @@ console.log(aaa);
           <div className='naviLocation'>위치</div>
           <input className="naviInput" placeholder='어디로 여행가세요?' />
         </div>
+
         <div className="naviLine" />
         
-        
-        
-
         <div className='naviContent' id="navi2">        
           <Calender />
         </div>
@@ -54,8 +62,9 @@ console.log(aaa);
         <div className="naviLine" />*/}
 
         <div className='naviContent' id="label4">
-          <div className='naviGuest'>인원</div>
-          <div className="naviAddGuest">게스트 추가</div>
+          <Modal open={modalOpen} close={closeModal}></Modal>
+          <div className='naviGuest' onClick={openModal}>인원</div>
+          <div className="naviAddGuest" onClick={openModal}>게스트 추가</div>
         </div>
 
         <div className='naviSearch'>
