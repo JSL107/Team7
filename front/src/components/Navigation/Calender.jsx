@@ -1,46 +1,85 @@
 import React, { useState } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import './Calender.css'
 
-const Calender = (props) => {
-  
-  const [dateRange, setDateRange] = useState([null, null]);
-  const [startDate, endDate] = dateRange;
-  // const [startDate, setStartDate] = useState(null);
 
-  //   const btn = () =>  {
-  //     let money = hairprice*10000;
-  //     alert(startDate.toLocaleString()+"에 " + {header}.header +"과정을 예약하셨습니다." + "\n금액은" + money.toLocaleString('en-AU') + "원 입니다.");
+const Calender = () => {
 
-  //   }
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null)
+  // const [dateRange, setDateRange] = useState([null, null]);
+  // const [startDate, endDate] = dateRange;
+
+
   return (
-  
-    /**
-     * 1. 시작일수는 현재보다 과거일수 없다.
-     * 2. 예약 종료 일은 현재와 예약 시작 일 보다 과거일수 없다.
-     * 3. startDate와 EndDate를 분리한다.
-     */
-    <div>
+    <div className="B">
 
-      <DatePicker
-        showWeekNumbers={true}
-        selectsRange={true}
-        minDate={new Date()}
-        startDate={startDate}
-        endDate={endDate}
-        dateFormat="M월 d일"
-        onChange={(update) => {
-          setDateRange(update);
-        }}
-        isClearable={true}
-        placeholderText="날짜 선택"
-      />
+      <div className="C" id="in">
+        <div className='naviCheckin'>체크인</div>
 
 
+        <DatePicker
+          className='datepicker1'
+          id='dp'
+          selected={startDate}
+          minDate={new Date()}
+          maxDate={endDate}
+          startDate={startDate}
+          endDate={endDate}
+          dateFormat="M월 d일"
+          onChange={(date) => {
+            setStartDate(date);
+          }}
+          selectsStart
+          isClearable={true}
+          placeholderText="날짜 선택"
+        />
+      </div>
+
+        <div className="naviLine" />
+
+
+
+      <div className="C" id="out">
+        <div className='naviCheckout'>체크아웃</div>
+        <div className="naviDate">
+        <DatePicker
+          className='datepicker2'
+          id='dp'
+          selected={endDate}
+          minDate={startDate}
+          startDate={startDate}
+          endDate={endDate}
+          dateFormat="M월 d일"
+          onChange={(date) => {
+            setEndDate(date);
+          }}
+          selectsEnd
+          isClearable={true}
+          placeholderText="날짜 선택"
+        />
+        </div>
+      </div>
+
+      
+      
     </div>
 
 
 
+    /* <div className='naviContent'>
+              <div className='naviCheckin'>체크인</div>
+              <div className="naviDate"></div>
+            </div>
+    
+    
+            <div className="naviLine" />
+    
+            <div className='naviContent'>
+            <div className='naviCheckout'>체크아웃</div>
+            <div className="naviDate"><Calender /></div>
+            </div> */
   )
 
 }

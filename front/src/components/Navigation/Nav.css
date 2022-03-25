@@ -17,6 +17,7 @@
     background-color: #273746;
     z-index: 100;
     width: 100%;
+    text-align: left;
 
 }
 
@@ -61,23 +62,25 @@
     border-radius: 32px;
     overflow: hidden;
     align-items: center;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
 }
 
 .naviContent {
-    padding: 9px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 9px 30px 9px 30px;
     font-weight: 800;
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 0.04px;
     border-radius: 32px;
     background-color: white;
-    width: 130px;
+    /* width: 130px;*/
 }
 
-.naviContent:hover {
+.naviContent#navi2 {
+    padding: 0;
+}
+
+.naviContent:hover:not(#navi2) {
     background-color: #EBEBEB;
     border-radius: 32px;
 }
