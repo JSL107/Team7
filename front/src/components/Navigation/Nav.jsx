@@ -2,13 +2,29 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import DehazeIcon from '@mui/icons-material/Dehaze';
 import LanguageIcon from '@mui/icons-material/Language';
 import SearchIcon from '@mui/icons-material/Search';
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import image from '../Navigation/images/7stay.png';
+=======
 import React, {useState } from 'react';
 import image from '../Navigation/images/homelogo.png';
+>>>>>>> 5d6ac59dafbf5ef724367953b31955f0bc10f066
 import Calender from './Calender';
 import Modal from './Modal';
 import './Nav.css';
 
 const Nav = () => {
+<<<<<<< HEAD
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+=======
   // const element1= document.getElementsByTagName("div")[15];
   // console.log(element1);
   // const datepicker2 = document.getElementById('datepicker2');
@@ -23,12 +39,13 @@ const Nav = () => {
       const closeModal = () => {
         setModalOpen(false);
       };
+>>>>>>> 5d6ac59dafbf5ef724367953b31955f0bc10f066
 
   return (
+
     <div className='navicontainer'>
       <a href='/'>
         <img className="storeTitle"
-          //src="https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png"
           src={image} alt="Seven stay title" />
       </a>
 
@@ -40,26 +57,16 @@ const Nav = () => {
         </div>
 
         <div className="naviLine" />
+<<<<<<< HEAD
+
+        <div className='naviContent' id="navi2">
+=======
         
         <div className='naviContent' id="navi2">        
+>>>>>>> 5d6ac59dafbf5ef724367953b31955f0bc10f066
           <Calender />
         </div>
         <div className="naviLine" />
-
-        {/* <div className='naviContent'>
-          <div className='naviCheckin'>체크인</div>
-          <div className="naviDate"></div>
-        </div>
-
-
-        <div className="naviLine" />
-
-        <div className='naviContent'>
-        <div className='naviCheckout'>체크아웃</div>
-        <div className="naviDate"><Calender /></div>
-        </div> 
-
-        <div className="naviLine" />*/}
 
         <div className='naviContent' id="label4">
           <Modal open={modalOpen} close={closeModal}></Modal>
@@ -71,8 +78,6 @@ const Nav = () => {
           <SearchIcon />
         </div>
       </div>
-
-
 
       {/* 네비게이션 로그인 부분*/}
       <div className='naviRight'>
@@ -88,17 +93,12 @@ const Nav = () => {
             {/* <img src='https://a0.muscache.com/defaults/user_pic-50x50.png'/> */}
           </div>
         </button>
-
-
       </div>
 
-
-
-
-
-
     </div>
+
   )
+
 }
 
 export default Nav

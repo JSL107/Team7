@@ -10,7 +10,7 @@
     background-color:  #28B463;
     background-color:  #2C3E50  ; */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: sticky;
     top: 0;
@@ -29,7 +29,11 @@
     text-align: center;
     white-space: nowrap;
 
+<<<<<<< HEAD
+    width : 270px;
+=======
     width : 100px;
+>>>>>>> 5d6ac59dafbf5ef724367953b31955f0bc10f066
     height : 100px;
 }
 
@@ -136,7 +140,7 @@
 .naviLang {
     cursor:pointer;
     border-radius: 2rem;
-    padding: 10px;
+    padding: 11px;
     display: flex;
     color: white;
 }
@@ -159,6 +163,11 @@
 
 .naviRb:hover {
     background-color: #FF385C;
+}
+
+.naviLang:hover {
+    background-color: rgba(185, 184, 184, 0.12);
+    border-radius: 32px;
 }
 
 .deha {

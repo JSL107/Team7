@@ -103,6 +103,13 @@
     font-size: 15px;
 }
 
+<<<<<<< HEAD
+.modal > section > footer button:focus {
+    background-color: #FF385C;
+}
+
+=======
+>>>>>>> 5d6ac59dafbf5ef724367953b31955f0bc10f066
 .modal.openModal {
     display: flex;
     align-items: center;
