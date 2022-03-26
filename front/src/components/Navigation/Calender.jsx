@@ -1,55 +1,38 @@
 import React, { useState } from 'react';
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import CalenderModal from '../Layout/CalenderModal';
 import './Calender.css'
+import SendDateValue from  '../Layout/CalenderModal'
+
 
 
 const Calender = () => {
+  const [modalOpen, setModalOpen] = useState(false);
 
-  const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
+  const openModal = () => {
+    setModalOpen(true);
+  };
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   return (
 
-    <div className="B">
+    <div className="calender">
 
-      <div className="C" id="in">
-        <div className='naviCheckin'>체크인</div>
-        <DatePicker
-          className='datepicker1'
-          id='dp'
-          selected={startDate}
-          minDate={new Date()}
-          maxDate={endDate}
-          startDate={startDate}
-          endDate={endDate}
-          dateFormat="M월 d일"
-          onChange={(date) => { setStartDate(date); }}
-          selectsStart
-          isClearable={true}
-          placeholderText="날짜 선택"
-        />
+      <div className="datePicker" id="in">
+        <div className='naviCheckin' onClick={openModal}>체크인</div>
+        <div className='datePickerText' onClick={openModal}> 날짜선택</div>
+        <CalenderModal open={modalOpen} close={closeModal}/>
+        <SendDateValue/>
       </div>
 
       <div className="naviLine" />
 
-      <div className="C" id="out">
-        <div className='naviCheckout'>체크아웃</div>
+      <div className="datePicker" id="out">
+        <div className='naviCheckout' onClick={openModal}>체크아웃</div>
+        <div className='datePickerText' onClick={openModal}> 날짜선택</div>
         <div className="naviDate">
-          <DatePicker
-            className='datepicker2'
-            id='dp'
-            selected={endDate}
-            // ??(null 병합 할당) : (비교조건문 있으면 앞에꺼 없으면 뒤에꺼(default))
-            minDate={startDate ?? new Date()}
-            startDate={startDate}
-            endDate={endDate}
-            dateFormat="M월 d일"
-            onChange={(date) => { setEndDate(date); }}
-            selectsEnd
-            isClearable={true}
-            placeholderText="날짜 선택"
-          />
+        <CalenderModal open={modalOpen} close={closeModal}/>      
         </div>
       </div>
 

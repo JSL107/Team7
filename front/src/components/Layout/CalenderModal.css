@@ -1,0 +1,119 @@
+/*Modal 기능*/
+.modal {
+    position: absolute; 
+    top: 230px;
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    display: none; 
+}
+
+.modal > .section-datepicker  {
+    animation: modal-show 0.3s;
+    width: auto;
+    max-width: auto;
+    margin: 0 0 0 0;
+    border-radius: 0.3rem;
+    background-color: #828282;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+.modal > .section-datepicker > header {
+    grid-column: 1 / span 2;
+    display: grid;
+    position: relative;
+}
+
+.modal > .section-datepicker > header > .title {
+    font-style: normal;
+    font-size: 20px;
+    margin : 0 0;
+    width: auto;
+    text-align: center;
+    
+}
+
+.modal > .section-datepicker > main {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+
+.modal > .section-datepicker > footer {
+    grid-column: 1 / span 2;
+    padding: 16px 16px;
+    text-align: center;
+}
+
+.modal > .section-datepicker > footer button {
+    padding: 6px 12px;
+    color: #fff;
+    background-color: #273746;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.modal > .section-datepicker > footer button:focus {
+    background-color: #FF385C;
+}
+
+.modal .openModal {
+    display: flex;
+    align-items: center;
+    /* 팝업이 열릴때 스르륵 열리는 효과 */
+    animation: modal-bg-show 0.3s;
+}
+
+@keyframes modal-show {
+  from {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes modal-bg-show {
+  from {
+    opacity: 0;
+  }
+  to {
+  opacity: 1;
+  }
+}
+
+/* react Date picker css 부분 */
+/* .react-datepicker {
+    font-size: 1.5em;
+  }
+  .react-datepicker__header {
+    padding-top: 1.0em;
+  }
+  .react-datepicker__month {
+    margin: 0.4em 1em;
+  }
+  .react-datepicker__day-name,
+  .react-datepicker__day {
+    width: 3.0em;
+    line-height: 2.0em;
+    margin: 0.166em;
+  }
+  .react-datepicker__current-month {
+    font-size: 1em;
+  }
+  
+  .react-datepicker__navigation { 
+    top: 1em;
+    line-height: 1.7em;
+    border: 0.45em solid transparent;
+  } */
+ 
+
+
+  

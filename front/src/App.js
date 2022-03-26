@@ -4,8 +4,7 @@ import Home from './components/Layout/Home';
 import Nav from './components/Navigation/Nav';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Place from './components/Layout/Place';
-import Calender from './components/Navigation/Calender';
-import LandingPage from './components/Layout/LandingPage';
+import CalenderModal from './components/Layout/CalenderModal';
 
 function App() {
   return (
@@ -14,14 +13,13 @@ function App() {
        <BrowserRouter>
 
         <Nav>
-          <Calender/> 
+          <CalenderModal/>
         </Nav>
         <Routes>
          <Route path="/" element={<Home/>}> </Route> 
          
          <Route path="/Layout/Place/:id" element={<Place/>}> </Route>
         </Routes>
-        {/* <LandingPage/> */}
         <Footer/>
       </BrowserRouter>
     </div>

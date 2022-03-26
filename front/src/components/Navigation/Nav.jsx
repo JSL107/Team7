@@ -36,8 +36,8 @@ const Nav = () => {
 
         <div className="naviLine" />
 
-        <div className='naviContent' id="navi2">
-          <Calender />
+        <div className='naviContent' id="navi2" >   
+        <Calender></Calender>
         </div>
         <div className="naviLine" />
 
