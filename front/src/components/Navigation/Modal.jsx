@@ -1,6 +1,7 @@
 import React from 'react'
 import './Modal.css'
 
+
 const Modal = (props) => {
   const { open, close } = props;
 
@@ -59,7 +60,7 @@ const Modal = (props) => {
     </div>
 
   )
-  
+
 }
 
 export default Modal

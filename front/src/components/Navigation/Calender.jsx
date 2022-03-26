@@ -7,10 +7,10 @@ import './Calender.css'
 const Calender = () => {
 
   const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null)
+  const [endDate, setEndDate] = useState(null);
 
   return (
-    
+
     <div className="B">
 
       <div className="C" id="in">
@@ -31,27 +31,28 @@ const Calender = () => {
         />
       </div>
 
-        <div className="naviLine" />
+      <div className="naviLine" />
 
       <div className="C" id="out">
         <div className='naviCheckout'>체크아웃</div>
         <div className="naviDate">
-        <DatePicker
-          className='datepicker2'
-          id='dp'
-          selected={endDate}
-          minDate={startDate}
-          startDate={startDate}
-          endDate={endDate}
-          dateFormat="M월 d일"
-          onChange={(date) => { setEndDate(date); }}
-          selectsEnd
-          isClearable={true}
-          placeholderText="날짜 선택"
-        />
+          <DatePicker
+            className='datepicker2'
+            id='dp'
+            selected={endDate}
+            // ??(null 병합 할당) : (비교조건문 있으면 앞에꺼 없으면 뒤에꺼(default))
+            minDate={startDate ?? new Date()}
+            startDate={startDate}
+            endDate={endDate}
+            dateFormat="M월 d일"
+            onChange={(date) => { setEndDate(date); }}
+            selectsEnd
+            isClearable={true}
+            placeholderText="날짜 선택"
+          />
         </div>
       </div>
- 
+
     </div>
 
   )
