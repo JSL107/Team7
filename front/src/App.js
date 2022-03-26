@@ -5,7 +5,6 @@ import Nav from './components/Navigation/Nav';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Place from './components/Layout/Place';
 import Calender from './components/Navigation/Calender';
-import Map from './components/Layout/Map';
 import LandingPage from './components/Layout/LandingPage';
 
 function App() {
@@ -22,7 +21,7 @@ function App() {
          
          <Route path="/Layout/Place/:id" element={<Place/>}> </Route>
         </Routes>
-        <LandingPage/>
+        {/* <LandingPage/> */}
         <Footer/>
       </BrowserRouter>
     </div>

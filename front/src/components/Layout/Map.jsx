@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import './Map.css'
 
 const { kakao } = window
 /*global kakao*/
@@ -52,13 +53,15 @@ const Map=({ searchPlace })=>{
   }, [searchPlace])
 
   return (
-     <div
+    <div
         id="myMap"
         style={{
           width: '500px',
           height: '500px',
-        }}>
-     </div>
+        }}
+    >
+    
+    </div>
   )
   
 }
