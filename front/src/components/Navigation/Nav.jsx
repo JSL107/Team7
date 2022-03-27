@@ -1,22 +1,29 @@
 import LanguageIcon from '@mui/icons-material/Language';
-import SearchIcon from '@mui/icons-material/Search';
 import React, { useState } from 'react';
 import image from '../Navigation/images/7stay.png';
 import Calender from './Calender';
-import Modal from './Modal';
-import Login from './Login';
+import GuestModal from './GuestModal';
+import Button from '../Layout/Button'
 import './Nav.css';
 
 const Nav = () => {
-
   const [modalOpen, setModalOpen] = useState(false);
-
+  const [count,setCount] = useState("게스트 추가");
+  
   const openModal = () => {
     setModalOpen(true);
   };
   const closeModal = () => {
     setModalOpen(false);
   };
+  
+
+  const totalGuest = (count)=> {
+    {/* {totalGuest ? `게스트 ${totalGuest}명` : "게스트 추가"} */}
+    setCount(count)
+  };
+  console.log(count);
+
 
   return (
 
@@ -41,13 +48,16 @@ const Nav = () => {
         <div className="naviLine" />
 
         <div className='naviContent' id="label4">
-          <Modal open={modalOpen} close={closeModal}></Modal>
+          {/*<ExampleModal></ExampleModal> */}
+         <GuestModal open={modalOpen} close={closeModal}></GuestModal>
           <div className='naviGuest' onClick={openModal}>인원</div>
-          <div className="naviAddGuest" onClick={openModal}>게스트 추가</div>
+          <div className="naviAddGuest" onClick={openModal}>
+            {count}
+          </div>
         </div>
 
         <div className='naviSearch'>
-          <SearchIcon />
+          <Button location={'제주'} date={image} people={image} type="submit"></Button>
         </div>
       </div>
 
@@ -57,11 +67,14 @@ const Nav = () => {
           <LanguageIcon />
           
         </div>
-
-        
-          <Login></Login>
-        
-
+        <button type='button' className='naviRb'>
+          <div className='deha'>
+            <DehazeIcon />
+          </div>
+          <div className='account'>
+            <AccountCircleIcon />
+          </div>
+        </button>
       </div>
 
     </div>

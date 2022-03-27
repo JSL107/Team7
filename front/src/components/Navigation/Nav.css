@@ -151,7 +151,6 @@
     margin-right: 80px;
     height: 43px;
     width: 80px;
-    align-items: center;
     -webkit-box-align: center;
     appearance: none;
     display: inline-flex;
@@ -164,6 +163,10 @@
 .naviLang:hover {
     background-color: rgba(185, 184, 184, 0.12);
     border-radius: 32px;
+}
+
+.naviSearch {
+    cursor:pointer;
 }
 
 .deha {
