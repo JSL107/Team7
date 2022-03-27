@@ -1,12 +1,12 @@
 /*Modal 기능*/
-.modal {
+/* .modal {
     position: absolute; 
-    top: 230px;
+    top: 240px;
     left: 0; 
     width: 100%; 
     height: 100%; 
     display: none; 
-}
+} */
 
 .modalCountNumber button {
     outline: none;
@@ -28,7 +28,7 @@
     justify-content: center;
 }
 
-.modal > section {
+.modal > .section-guest {
     animation: modal-show 0.3s;
     width: 400px;
     max-width: 1000;
@@ -38,6 +38,13 @@
     overflow: hidden;
     margin-left: auto;
     margin-right: 250px;
+    margin-top: 39px;
+}
+
+.modal .header-guest {
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
 }
 
 /*.modal > section > header {

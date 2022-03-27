@@ -44,15 +44,16 @@ const GuestModal = (props) => {
 
   const totalGuest = counterPeople + counterChild + counterBaby + counterAnimal;
   //console.log({counterPeople});
-  //console.log(totalGuest);
+  console.log(totalGuest);
+
 
   return (
     <div className={open ? 'openModal modal' : 'modal'}>
       {open ? (
         <>
-        <section>
+        <section className='section-guest'>
           
-          <div>
+          <div className='header-guest'>
             {totalGuest ? `게스트 ${totalGuest}명` : "게스트 추가"}
           </div>
 
@@ -88,7 +89,7 @@ const GuestModal = (props) => {
             <div className='modalCount'>
               <p className='modalAdult'>성인</p>
               <div className='modalCountNumber'>
-                <button id='decrease' onClick={ () => { if (counterPeople === 0) {return;} setCounterPeople(counterPeople-1);} }>
+                <button id='decrease' onClick={ decreaseNumber }>
                    - 
                 </button>
                 <p id='numberPeople'>{counterPeople}</p>

@@ -165,6 +165,10 @@
     border-radius: 32px;
 }
 
+.naviSearch {
+    cursor:pointer;
+}
+
 .deha {
     padding-right: 5px;
     align-items: center;

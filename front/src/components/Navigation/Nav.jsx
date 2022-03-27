@@ -6,12 +6,11 @@ import image from '../Navigation/images/7stay.png';
 import Calender from './Calender';
 import GuestModal from './GuestModal';
 import Button from '../Layout/Button'
-
 import './Nav.css';
 
 const Nav = () => {
-  
   const [modalOpen, setModalOpen] = useState(false);
+  const [count,setCount] = useState("게스트 추가");
   
   const openModal = () => {
     setModalOpen(true);
@@ -20,7 +19,12 @@ const Nav = () => {
     setModalOpen(false);
   };
   
-  //const totalGuest = Modal.counterPeople;
+
+  const totalGuest = (count)=> {
+    {/* {totalGuest ? `게스트 ${totalGuest}명` : "게스트 추가"} */}
+    setCount(count)
+  };
+  console.log(count);
 
 
   return (
@@ -46,13 +50,11 @@ const Nav = () => {
         <div className="naviLine" />
 
         <div className='naviContent' id="label4">
-          {/* <ExampleModal></ExampleModal> */}
-          <GuestModal open={modalOpen} close={closeModal}></GuestModal>
+          {/*<ExampleModal></ExampleModal> */}
+         <GuestModal open={modalOpen} close={closeModal}></GuestModal>
           <div className='naviGuest' onClick={openModal}>인원</div>
-          {/* <div className="naviAddGuest" onClick={openModal}>게스트 추가 </div> */}
           <div className="naviAddGuest" onClick={openModal}>
-          {/* {totalGuest ? `게스트 ${totalGuest}명` : "게스트 추가"} */}
-          rrrr
+            {count}
           </div>
         </div>
 
@@ -72,7 +74,6 @@ const Nav = () => {
           </div>
           <div className='account'>
             <AccountCircleIcon />
-            {/* <img src='https://a0.muscache.com/defaults/user_pic-50x50.png'/> */}
           </div>
         </button>
       </div>
