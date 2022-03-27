@@ -1,9 +1,13 @@
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import DehazeIcon from '@mui/icons-material/Dehaze';
 import LanguageIcon from '@mui/icons-material/Language';
 import React, { useState } from 'react';
 import image from '../Navigation/images/7stay.png';
 import Calender from './Calender';
 import GuestModal from './GuestModal';
 import Button from '../Layout/Button'
+import Guest from './Guest'
+import Login from './Login'
 import './Nav.css';
 
 const Nav = () => {
@@ -48,12 +52,12 @@ const Nav = () => {
         <div className="naviLine" />
 
         <div className='naviContent' id="label4">
-          {/*<ExampleModal></ExampleModal> */}
-         <GuestModal open={modalOpen} close={closeModal}></GuestModal>
+          <Guest></Guest> 
+         {/*<GuestModal open={modalOpen} close={closeModal}></GuestModal>
           <div className='naviGuest' onClick={openModal}>인원</div>
           <div className="naviAddGuest" onClick={openModal}>
             {count}
-          </div>
+          </div>*/}
         </div>
 
         <div className='naviSearch'>
@@ -65,8 +69,9 @@ const Nav = () => {
       <div className='naviRight'>
         <div className='naviLang'>
           <LanguageIcon />
-          
         </div>
+        <Login></Login>
+        {/*
         <button type='button' className='naviRb'>
           <div className='deha'>
             <DehazeIcon />
@@ -74,7 +79,7 @@ const Nav = () => {
           <div className='account'>
             <AccountCircleIcon />
           </div>
-        </button>
+        </button> */}
       </div>
 
     </div>

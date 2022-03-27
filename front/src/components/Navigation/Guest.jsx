@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
+import GuestContent from './GuestContent'
 import './GuestModal.css'
 
-import ExampleContent from './ExampleContent'
 
-const ExampleModal = (props) => {
+const Guest = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
@@ -24,19 +24,15 @@ const ExampleModal = (props) => {
   console.log(totalGuest);
 
   return (
-    <div className={props.open ? 'openModal modal' : 'modal'}>
-      {props.open ? (
-        <div>
+    <div>
           <div className='naviGuest' onClick={openModal}>인원</div>
           <div className="naviAddGuest" onClick={openModal}>
             {totalGuest ? `게스트 ${totalGuest}명` : "게스트 추가"}
           </div>
-          <ExampleContent></ExampleContent>
-        </div>
-      ) : null}
+          <GuestContent open={modalOpen} close={closeModal}></GuestContent>
     </div>
   )
 
 }
 
-export default ExampleModal
+export default Guest

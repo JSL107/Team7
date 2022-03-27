@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import LoginModal from '../Layout/LoginModal';
 import DehazeIcon from '@mui/icons-material/Dehaze';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import './Login.css'
 
 const Login = () => {
 
@@ -15,10 +16,22 @@ const Login = () => {
     };
     return (
         <>
-        <div className='naviRb' onClick={openModal}>
+        <button type='button' className='naviRb' onClick={openModal}>
+          <div className='deha'>
+            <DehazeIcon />
+          </div>
+          <div className='account'>
+            <AccountCircleIcon />
+          </div>
+        </button>
+
+        {/* <div className='naviRb' onClick={openModal}>
         <AccountCircleIcon />
-        <DehazeIcon />
         </div>
+
+        <div>
+        <DehazeIcon />
+        </div> */}
 
         <div>
             <LoginModal open={modalOpen} close={closeModal}></LoginModal>

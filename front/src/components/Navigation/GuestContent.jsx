@@ -1,7 +1,7 @@
-import React from 'react'
+import React , { useState } from 'react';
 import './GuestModal.css'
 
-const ExampleContent = () => {
+const GuestContent = (props) => {
     const { open, close } = props;
 
     // const [number, setNumber] = useState(0);
@@ -49,6 +49,7 @@ const ExampleContent = () => {
   
     return (
       <div className={open ? 'openModal modal' : 'modal'}>
+        {props.open ? (
           <section className='section-guest'>
             
             <div className='header-guest'>
@@ -135,9 +136,9 @@ const ExampleContent = () => {
             </footer>
   
           </section>
-
+        ) : null}
       </div>
     )
 }
 
-export default ExampleContent
+export default GuestContent
