@@ -4,7 +4,7 @@ import './Calender.css'
 
 const Calender = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [dates, setDate] = useState();
+  const [dates, setDate] = useState("날짜 선택");
 
   const openModal = () => {
     setModalOpen(true);
@@ -15,9 +15,11 @@ const Calender = () => {
 
   let setTransDate = (dates) => {
     // console.log(dates);
-    setDate(dates);
+    setDate(dates.toLocaleDateString());
   };
 
+
+  console.log(dates);
   // useEffect(() => {
   //   firstDate = setDate;
   
@@ -34,7 +36,7 @@ const Calender = () => {
       <div className="datePicker" id="in">
         <div className='naviCheckin' onClick={openModal}>체크인</div>
         <CalenderModal open={modalOpen} close={closeModal} dates={dates} dateData={setTransDate}/>
-        <div type="text" className='datePickerText' onClick={openModal}> 날짜선택</div>
+        <div type="text" className='datePickerText' onClick={openModal}> {setDate}</div>
       </div>
 
       <div className="naviLine" />
