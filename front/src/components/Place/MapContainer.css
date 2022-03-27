@@ -1,0 +1,8 @@
+.mapContainer{
+    margin: 0 20px 0 20px;
+}
+
+#map {
+    left: 900px;
+    position:sticky;
+}

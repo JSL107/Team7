@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import Map from './Map'
 import './LadingPage.css'
+import MapContainer from './MapContainer'
 
-  const LandingPage = (id) => {
+const LandingPage = (id) => {
   const [InputText, setInputText] = useState('')
   const [Place, setPlace] = useState('')
 
@@ -22,7 +23,8 @@ import './LadingPage.css'
         <input placeholder="검색어를 입력하세요" onChange={onChange} value={InputText} />
         <button type="submit">검색</button>
       </form>
-      <Map searchPlace={id.id} />
+      {/*<Map searchPlace={id.id} />*/}
+      <MapContainer searchPlace={id.id} />
     </>
   )
 }

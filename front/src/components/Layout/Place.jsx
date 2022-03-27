@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams} from 'react-router-dom';
-import LandingPage from './LandingPage';
+import LandingPage from '../Place/LandingPage';
 import './Place.css';
 
 const Place = (props) => {
