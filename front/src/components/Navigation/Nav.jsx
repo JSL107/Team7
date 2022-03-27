@@ -1,23 +1,27 @@
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import DehazeIcon from '@mui/icons-material/Dehaze';
 import LanguageIcon from '@mui/icons-material/Language';
-import SearchIcon from '@mui/icons-material/Search';
 import React, { useState } from 'react';
 import image from '../Navigation/images/7stay.png';
 import Calender from './Calender';
-import Modal from './Modal';
+import GuestModal from './GuestModal';
+import Button from '../Layout/Button'
+
 import './Nav.css';
 
 const Nav = () => {
-
+  
   const [modalOpen, setModalOpen] = useState(false);
-
+  
   const openModal = () => {
     setModalOpen(true);
   };
   const closeModal = () => {
     setModalOpen(false);
   };
+  
+  //const totalGuest = Modal.counterPeople;
+
 
   return (
 
@@ -42,13 +46,18 @@ const Nav = () => {
         <div className="naviLine" />
 
         <div className='naviContent' id="label4">
-          <Modal open={modalOpen} close={closeModal}></Modal>
+          {/* <ExampleModal></ExampleModal> */}
+          <GuestModal open={modalOpen} close={closeModal}></GuestModal>
           <div className='naviGuest' onClick={openModal}>인원</div>
-          <div className="naviAddGuest" onClick={openModal}>게스트 추가</div>
+          {/* <div className="naviAddGuest" onClick={openModal}>게스트 추가 </div> */}
+          <div className="naviAddGuest" onClick={openModal}>
+          {/* {totalGuest ? `게스트 ${totalGuest}명` : "게스트 추가"} */}
+          rrrr
+          </div>
         </div>
 
         <div className='naviSearch'>
-          <SearchIcon />
+          <Button location={'제주'} date={image} people={image} type="submit"></Button>
         </div>
       </div>
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import DatePicker,{ registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import './CalenderModal.css';
@@ -8,22 +8,15 @@ registerLocale("ko", ko);
 const CalenderModal = (props) => {
     const [dateRange, setDateRange] = useState([null, null]);
     const [startDate, endDate] = dateRange;
-    let lastDate = endDate
-    let newDate = new Date();
 
-    useEffect(() => {
-        // endDate(dates);
-        lastDate = endDate;
-        newDate = startDate;
-    }, [endDate, startDate])
+    const selectedDate = (dates) => {
+        props.dateData(dates);
+    }
 
-    // console.log(newDate);
-    // console.log(lastDate);
-    
-    const { open, close } = props;
+
     return (
-        <div className={open ? 'openModal modal' : 'modal'}>
-            {open ? (
+        <div className={props.open ? 'openModal modal' : 'modal'}>
+            {props.open ? (
 
                 <section className='section-datepicker'>
                     <header><p className='title'>달력</p></header>
@@ -37,19 +30,20 @@ const CalenderModal = (props) => {
                             startDate={startDate}
                             endDate={endDate}
                             dateFormat="M월 d일"
+                            onSelect ={(date)=>selectedDate(date)}
                             onChange={(date) => { 
                                 setDateRange(date);
                             }}
+                            disabledKeyboardNavigation
+                            focusSelectedMonth = {true}
                             monthsShown={2}
                             isClearable={true}
                             inline
                             />
-                            
                     </main>
 
-
                     <footer>
-                        <button className="close" onClick={close}>
+                        <button className="close" onClick={props.close}>
                             close
                         </button>
                     </footer>
@@ -61,9 +55,8 @@ const CalenderModal = (props) => {
             ) : null}
             
         </div>
-    
 
-    )
+)
     
 }
 

@@ -1,11 +1,5 @@
 /*Modal 기능*/
 .modal {
-    /* position: absolute; 
-    top: 0; left: 0; 
-    width: 100%; 
-    height: 100%; 
-    display: none; */
-    /* background-color: rgba(0, 0, 0, 0.4); */
     position: absolute; 
     top: 230px;
     left: 0; 
@@ -29,7 +23,7 @@
     margin: auto 5px;
 }
 
-.modalCountNumber #number {
+.modalCountNumber #numberPeople, .modalCountNumber #numberChild, .modalCountNumber #numberBaby, .modalCountNumber #numberAnimal{
     margin: auto 10px;
     justify-content: center;
 }
@@ -46,12 +40,12 @@
     margin-right: 250px;
 }
 
-.modal > section > header {
-    /* position: relative;
+/*.modal > section > header {
+     position: relative;
     padding: 16px 64px 16px 16px;
     background-color: #f1f1f1;
-    font-weight: 700; */
-}
+    font-weight: 700; 
+}*/
 
 .modal > section > header button {
     position: absolute;
