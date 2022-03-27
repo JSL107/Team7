@@ -23,7 +23,6 @@ const Calender = () => {
         <div className='naviCheckin' onClick={openModal}>체크인</div>
         <div className='datePickerText' onClick={openModal}> 날짜선택</div>
         <CalenderModal open={modalOpen} close={closeModal}/>
-        <SendDateValue/>
       </div>
 
       <div className="naviLine" />

@@ -1,11 +1,10 @@
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import DehazeIcon from '@mui/icons-material/Dehaze';
 import LanguageIcon from '@mui/icons-material/Language';
 import SearchIcon from '@mui/icons-material/Search';
 import React, { useState } from 'react';
 import image from '../Navigation/images/7stay.png';
 import Calender from './Calender';
 import Modal from './Modal';
+import Login from './Login';
 import './Nav.css';
 
 const Nav = () => {
@@ -56,16 +55,13 @@ const Nav = () => {
       <div className='naviRight'>
         <div className='naviLang'>
           <LanguageIcon />
+          
         </div>
-        <button type='button' className='naviRb'>
-          <div className='deha'>
-            <DehazeIcon />
-          </div>
-          <div className='account'>
-            <AccountCircleIcon />
-            {/* <img src='https://a0.muscache.com/defaults/user_pic-50x50.png'/> */}
-          </div>
-        </button>
+
+        
+          <Login></Login>
+        
+
       </div>
 
     </div>

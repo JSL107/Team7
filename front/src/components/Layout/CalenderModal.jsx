@@ -6,21 +6,12 @@ import ko from 'date-fns/locale/ko';
 registerLocale("ko", ko);
 
 const CalenderModal = (props) => {
+    const { open, close } = props;
     const [dateRange, setDateRange] = useState([null, null]);
     const [startDate, endDate] = dateRange;
-    let lastDate = endDate
-    let newDate = new Date();
-
-    useEffect(() => {
-        // endDate(dates);
-        lastDate = endDate;
-        newDate = startDate;
-    }, [endDate, startDate])
-
-    // console.log(newDate);
-    // console.log(lastDate);
+  
     
-    const { open, close } = props;
+    
     return (
         <div className={open ? 'openModal modal' : 'modal'}>
             {open ? (
