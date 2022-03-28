@@ -1,17 +1,31 @@
 package pro.sevenstay.sevenstay.model.dto;
 
+import pro.sevenstay.sevenstay.model.entity.Accommodation;
+
 public class AccommodationDTO {
+    
+    private String id;
     private String city; // 시 , 도시위치
     private String accommodationName; // 숙소명
     private String address; // 주소
     private String phoneNumber; // 전화번호
 
+    public AccommodationDTO(Accommodation accommodation) {
+        this.id = accommodation.getId();
+        this.city = accommodation.getCity();
+        this.accommodationName = accommodation.getAccommodationName();
+        this.address = accommodation.getAddress();
+        this.phoneNumber = accommodation.getPhoneNumber();
+    }
 
-    public AccommodationDTO(String city, String accommodationName, String address, String phoneNumber) {
-        this.city = city;
-        this.accommodationName = accommodationName;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
+    
+    public String getId() {
+        return id;
+    }
+
+
+    public void setId(String id) {
+        this.id = id;
     }
 
 
@@ -19,41 +33,33 @@ public class AccommodationDTO {
         return city;
     }
 
-
     public void setCity(String city) {
         this.city = city;
     }
-
 
     public String getAccommodationName() {
         return accommodationName;
     }
 
-
     public void setAccommodationName(String accommodationName) {
         this.accommodationName = accommodationName;
     }
-
 
     public String getAddress() {
         return address;
     }
 
-
     public void setAddress(String address) {
         this.address = address;
     }
-
 
     public String getPhoneNumber() {
         return phoneNumber;
     }
 
-
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-
 
     @Override
     public String toString() {
@@ -61,6 +67,4 @@ public class AccommodationDTO {
                 + ", phoneNumber=" + phoneNumber + "]";
     }
 
-    
 }
-
