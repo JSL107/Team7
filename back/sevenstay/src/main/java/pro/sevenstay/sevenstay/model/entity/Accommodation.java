@@ -9,12 +9,13 @@ import javax.persistence.Id;
 @Entity
 public class Accommodation {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    // @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Accommodation_ID")
     private String id;
 
     private String city;
     private String accommodationName;
+    @Column(name = "Accommodation_address")
     private String address;
     private String phoneNumber;
 

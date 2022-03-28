@@ -20,9 +20,9 @@ public class OrderController {
         this.orderService = orderService;
     }
 
-    @PostMapping() // Post: ~/api/v1/orders
-    public void insertOrder(@RequestBody OrderDTO orderDTO) {
+    // @PostMapping() // Post: ~/api/v1/orders
+    // public void insertOrder(@RequestBody OrderDTO orderDTO) {
         
-        orderService.insertOder(orderDTO);
-    }
+    //     orderService.insertOrder(orderDTO);
+    // }
 }
