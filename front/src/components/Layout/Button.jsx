@@ -2,7 +2,7 @@ import React from 'react'
 import Nav from '../Navigation/Nav';
 import SearchIcon from '@mui/icons-material/Search';
 
-const Button = (props) => {
+const Button = () => {
 
     /*const {location, date, people, btnClick } = props;*/
 
@@ -21,8 +21,8 @@ const Button = (props) => {
     return (     
     <div>
 
-        <SearchIcon onClick={click} type={props.type || 'button'}>      
-        {props.children}
+        <SearchIcon onClick={click} type={'button'}>      
+        
         </SearchIcon>
 
     </div>

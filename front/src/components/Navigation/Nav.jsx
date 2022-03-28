@@ -41,7 +41,7 @@ const Nav = () => {
       <div className='naviCenter'>
         <div className='naviContent'>
           <div className='naviLocation'>위치</div>
-          <input className="naviInput" placeholder='어디로 여행가세요?' />
+          <input id="naviInput" className="naviInput" placeholder='어디로 여행가세요?' />
         </div>
 
         <div className="naviLine" />
@@ -71,7 +71,7 @@ const Nav = () => {
           <LanguageIcon />
         </div>
         <Login></Login>
-        {/*
+        
         <button type='button' className='naviRb'>
           <div className='deha'>
             <DehazeIcon />
@@ -79,7 +79,7 @@ const Nav = () => {
           <div className='account'>
             <AccountCircleIcon />
           </div>
-        </button> */}
+        </button>
       </div>
 
     </div>
