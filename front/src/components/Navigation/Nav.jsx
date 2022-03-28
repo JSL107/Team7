@@ -61,7 +61,7 @@ const Nav = () => {
         </div>
 
         <div className='naviSearch'>
-          <Button location={'제주'} date={image} people={image} type="submit"></Button>
+          <Button /*location={'제주'} date={image} people={image}*/ type="submit"></Button>
         </div>
       </div>
 
