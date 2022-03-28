@@ -23,7 +23,7 @@ const Guest = () => {
   return (
     <div>
           <div className='naviGuest' onClick={openModal}>인원</div>
-          <div className="naviAddGuest" onClick={openModal}>
+          <div id="guestCount" className="naviAddGuest" onClick={openModal}>
             {count}
           </div>
           <GuestContent open={modalOpen} close={closeModal} people={countPeople}></GuestContent>
