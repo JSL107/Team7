@@ -11,14 +11,9 @@ const CalenderModal = (props) => {
     const [dateRange, setDateRange] = useState([null, null]);
     const [startDate, endDate] = dateRange;
 
-    const selectedDate1 = (dates1) => {
-        props.dateData(dates1);
+    const selectedDate = (dates) => {
+        props.dateData(dates);
     }
-    const selectedDate2 = (dates2) => {
-        props.dateData(dates2);
-    }
-
-    let [one, two] = useState(true);
 
 
     return (
@@ -40,18 +35,7 @@ const CalenderModal = (props) => {
                             endDate={endDate}
                             dateFormat="M월 d일"
                             onSelect ={(date)=>{  
-
-                                if(one===true){
-                                    one = false;
-                                    two(one);
-                                    console.log("date1 :"+ date);
-                                    return selectedDate1(date);
-                                }else {
-                                    one = true;
-                                    two(one);
-                                    console.log("date2 :"+date);
-                                    return selectedDate2(date);
-                                }                                             
+                                selectedDate(date);                                            
                             }}
                             onChange={(date) => { 
                                 setDateRange(date);

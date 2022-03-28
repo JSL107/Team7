@@ -1,16 +1,6 @@
 .navicontainer {
-    /*margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    height: 120px;
-    text-align: center;
-    border-radius: 4px;
-    display: table;
-    white-space: normal;
-    background-color:  #28B463;
-    background-color:  #2C3E50  ; */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /**/
     align-items: center;
     position: sticky;
     top: 0;
@@ -24,11 +14,10 @@
 .navicontainer .storeTitle {
     float: left;
     font-size: 30px;
-    margin: 15px 0 15px 50px;
+    margin: 15px 0 15px 150px;
     display: block;
     text-align: center;
     white-space: nowrap;
-
     width : 270px;
     height : 100px;
 }
@@ -48,20 +37,6 @@
     overflow: hidden;
 }
 
-.naviCenter {
-    display: flex;
-    flex: 1;
-    max-width: fit-content;
-    padding-right: 9px;
-    height: 59px;
-    background-color: white;
-    border-radius: 32px;
-    overflow: hidden;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: justify;
-}
-
 .naviContent {
     padding: 9px 30px 9px 30px;
     font-weight: 800;
@@ -70,7 +45,6 @@
     letter-spacing: 0.04px;
     border-radius: 32px;
     background-color: white;
-    /* width: 150px; */
 }
 
 .naviContent#navi2 {
@@ -117,6 +91,7 @@
     padding-right: 40px;
 }
 
+
 .naviCenter .naviSearch {
     color:white;
     background-color: #FF385C;
@@ -129,8 +104,8 @@
 .naviRight {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 11vw;
+/*    width: 11vw;*/
+    margin-right: 150px;
 }
 
 .naviLang {
@@ -148,7 +123,6 @@
     user-select: none;
     padding: 10px;
     display: flex;
-    margin-right: 80px;
     height: 43px;
     width: 80px;
     -webkit-box-align: center;
@@ -167,6 +141,8 @@
 
 .naviSearch {
     cursor:pointer;
+    width: 24px;
+    height: 23px;
 }
 
 .deha {
@@ -177,4 +153,83 @@
 .account {
     padding-left: 5px;
     align-items: center;
+}
+
+@media screen and (min-width: 1718px){
+    .naviCenter {
+        display: flex;
+        flex: 1;
+        max-width: fit-content;
+        padding-right: 9px;
+        height: 59px;
+        background-color: white;
+        border-radius: 32px;
+        overflow: hidden;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: justify;
+        margin: 0px 100px 0px 50px ; /**/
+    }
+}
+
+@media screen and (max-width: 1717px){
+    .naviCenter {
+        display: flex;
+        flex: 1;
+        max-width: fit-content;
+        padding-right: 9px;
+        height: 59px;
+        background-color: white;
+        border-radius: 32px;
+        overflow: hidden;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 1568px){
+    .naviCenter {
+        display: flex;
+        flex: 1;
+        max-width: fit-content;
+        height: 59px;
+        background-color: white;
+        border-radius: 32px;
+        overflow: hidden;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 1390px){
+    #navidnlcl {
+        width: 130px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1568px){
+    .naviContent {
+        padding: 9px 30px 9px 30px;
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.04px;
+        border-radius: 32px;
+        background-color: white;
+    }
+}
+
+@media screen and (max-width: 1276px){
+    .naviCenter {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1390px){
+    .naviCenter #label4 {
+        padding-right: 20px;
+    }
 }

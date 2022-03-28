@@ -1,7 +1,7 @@
-import React from 'react'
+import React , { useState } from 'react';
 import './GuestModal.css'
 
-const ExampleContent = () => {
+const GuestContent = (props) => {
     const { open, close } = props;
 
     // const [number, setNumber] = useState(0);
@@ -9,29 +9,7 @@ const ExampleContent = () => {
     const [counterChild, setCounterChild] = useState(0);
     const [counterBaby, setCounterBaby] = useState(0);
     const [counterAnimal, setCounterAnimal] = useState(0);
-  
-    // const categories = [
-    //   {key: "id1", id: "adult", name: "성인"},
-    //   {key: "id2", id: "child", name: "어린이"},
-    //   {key: "id3", id: "baby", name: "유아"},
-    //   {key: "id4", id: "animal", name: "반려동물"}
-    // ];
-  
-    //  const [number, setNumber] = useState({
-    //    adult: 0, child: 0, baby: 0, animal: 0
-    //  })
-  
-    // const increaseNumber = () => {
-    //   setNumber(number+1);
-    // }
     
-    // const decreaseNumber = () => {
-    //   if(number === 0){
-    //     return;  
-    //   }
-    //   setNumber(number-1);
-    // }
-  
     const decreaseNumber = () => { 
       if (counterPeople === 0) 
       {return;} 
@@ -43,47 +21,25 @@ const ExampleContent = () => {
     }
   
     const totalGuest = counterPeople + counterChild + counterBaby + counterAnimal;
-    //console.log({counterPeople});
-    console.log(totalGuest);
+
+    const countPeople = (people) => {
+      props.people(people);
+    }
   
   
     return (
       <div className={open ? 'openModal modal' : 'modal'}>
+        {open ? (
           <section className='section-guest'>
             
-            <div className='header-guest'>
+            <div className='header-guest' onChange={countPeople(totalGuest)}>
               {totalGuest ? `게스트 ${totalGuest}명` : "게스트 추가"}
             </div>
   
             <main>
-              {/* <div className='modalCount'>
-                <p className='modalAdult'>성인</p>
-                <div className='modalCountNumber'>
-                  <button id='decrease' onClick={decreaseNumber} disabled={number.value === 1}>-</button>
-                  <p id='number'>{number}</p>
-                  <button id='increase' onClick={increaseNumber}>+</button>
-                </div>
-              </div> */}
-              
-                 {/* {categories.map((category) => (
-  
-              <div className='modalCount'>
-                <span className='modalAdult'>{category.name}</span>
-                <div className='modalCountNumber'>
-                  <button id='decrease' onClick={decreaseNumber }>
-                     - 
-                  </button>
-                  <p id='numberPeople'>{number}</p>
-                  <button id='increase' onClick={increaseNumber} >
-                     + 
-                  </button>
-                </div>
-              </div>
-  
-                ))} */}
+
   
             
-            {/*나중에 이 부분 중복되는거 묶어서 정리하기 */}
               <div className='modalCount'>
                 <p className='modalAdult'>성인</p>
                 <div className='modalCountNumber'>
@@ -135,9 +91,9 @@ const ExampleContent = () => {
             </footer>
   
           </section>
-
+        ) : null}
       </div>
     )
 }
 
-export default ExampleContent
+export default GuestContent
