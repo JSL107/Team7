@@ -40,3 +40,10 @@
     letter-spacing: 0.04px;
     background-color: inherit;
 }
+
+@media screen and (max-width: 1568px){
+    .datePicker {
+        padding: 9px 20px 9px 20px;
+        width: 64px;
+    }
+}

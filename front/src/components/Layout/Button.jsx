@@ -21,8 +21,8 @@ const Button = () => {
     return (     
     <div>
 
-        <SearchIcon onClick={click} type={'button'}>      
-        
+        <SearchIcon onClick={click} type={'button'}>
+          
         </SearchIcon>
 
     </div>

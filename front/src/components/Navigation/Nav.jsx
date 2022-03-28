@@ -21,13 +21,11 @@ const Nav = () => {
     setModalOpen(false);
   };
   
-
   const totalGuest = (count)=> {
     {/* {totalGuest ? `게스트 ${totalGuest}명` : "게스트 추가"} */}
     setCount(count)
   };
   console.log(count);
-
 
   return (
 
@@ -39,7 +37,7 @@ const Nav = () => {
 
       {/* 네비게이션 예약 부분*/}
       <div className='naviCenter'>
-        <div className='naviContent'>
+        <div className='naviContent' id='navidnlcl'>
           <div className='naviLocation'>위치</div>
           <input id="naviInput" className="naviInput" placeholder='어디로 여행가세요?' />
         </div>
@@ -49,6 +47,7 @@ const Nav = () => {
         <div className='naviContent' id="navi2" >   
         <Calender></Calender>
         </div>
+
         <div className="naviLine" />
 
         <div className='naviContent' id="label4">
@@ -63,6 +62,7 @@ const Nav = () => {
         <div className='naviSearch'>
           <Button /*location={'제주'} date={image} people={image}*/ type="submit"></Button>
         </div>
+
       </div>
 
       {/* 네비게이션 로그인 부분*/}
@@ -72,14 +72,14 @@ const Nav = () => {
         </div>
         <Login></Login>
         
-        <button type='button' className='naviRb'>
+        {/* <button type='button' className='naviRb'>
           <div className='deha'>
             <DehazeIcon />
           </div>
           <div className='account'>
             <AccountCircleIcon />
           </div>
-        </button>
+        </button> */}
       </div>
 
     </div>
