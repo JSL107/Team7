@@ -13,23 +13,20 @@ const Guest = () => {
     setModalOpen(false);
   };
 
+  const [count, setCount] = useState("게스트 추가");
 
-  const [counterPeople, setCounterPeople] = useState(0);
-  const [counterChild, setCounterChild] = useState(0);
-  const [counterBaby, setCounterBaby] = useState(0);
-  const [counterAnimal, setCounterAnimal] = useState(0);
+  const countPeople = (peoples) => {
+    setCount(peoples+ "명") 
+  }
 
-  const totalGuest = counterPeople + counterChild + counterBaby + counterAnimal;
-  //console.log({counterPeople});
-  console.log(totalGuest);
-
+  console.log(count);
   return (
     <div>
           <div className='naviGuest' onClick={openModal}>인원</div>
           <div className="naviAddGuest" onClick={openModal}>
-            {totalGuest ? `게스트 ${totalGuest}명` : "게스트 추가"}
+            {count}
           </div>
-          <GuestContent open={modalOpen} close={closeModal}></GuestContent>
+          <GuestContent open={modalOpen} close={closeModal} people={countPeople}></GuestContent>
     </div>
   )
 
