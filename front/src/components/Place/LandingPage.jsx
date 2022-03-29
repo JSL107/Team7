@@ -20,11 +20,11 @@ const LandingPage = (id) => {
   return (
     <>
       <form className="inputForm" onSubmit={handleSubmit}>
-        <input placeholder="검색어를 입력하세요" onChange={onChange} value={InputText} />
-        <button type="submit">검색</button>
+        {/*<input placeholder="검색어를 입력하세요" onChange={onChange} value={InputText} />
+        <button type="submit">검색</button>*/}
       </form>
-      {/*<Map searchPlace={id.id} />*/}
-      <MapContainer searchPlace={id.id} />
+      {/*<MapContainer searchPlace={id.id} />*/}
+      <Map searchPlace={id.id} />
     </>
   )
 }
