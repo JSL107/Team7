@@ -12,4 +12,5 @@ public class SevenstayApplication {
 		SpringApplication.run(SevenstayApplication.class, args);
 	}
 
+	
 }

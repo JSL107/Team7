@@ -6,4 +6,5 @@ import pro.sevenstay.sevenstay.model.dto.AccommodationDTO;
 
 public interface AccommodationService {
     List<AccommodationDTO> findAllAccommo();
+    void insertAccommodation(AccommodationDTO accommodationDTO);
 }
