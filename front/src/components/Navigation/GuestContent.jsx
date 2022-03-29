@@ -38,8 +38,6 @@ const GuestContent = (props) => {
   
             <main>
 
-  
-            
               <div className='modalCount'>
                 <p className='modalAdult'>성인</p>
                 <div className='modalCountNumber'>

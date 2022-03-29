@@ -1,14 +1,12 @@
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import DehazeIcon from '@mui/icons-material/Dehaze';
 import LanguageIcon from '@mui/icons-material/Language';
 import React, { useState } from 'react';
 import image from '../Navigation/images/7stay.png';
 import Calender from './Calender';
-import GuestModal from './GuestModal';
 import Button from '../Layout/Button'
 import Guest from './Guest'
 import Login from './Login'
 import './Nav.css';
+
 
 const Nav = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -52,15 +50,13 @@ const Nav = () => {
 
         <div className='naviContent' id="label4">
           <Guest></Guest> 
-         {/*<GuestModal open={modalOpen} close={closeModal}></GuestModal>
-          <div className='naviGuest' onClick={openModal}>인원</div>
-          <div className="naviAddGuest" onClick={openModal}>
-            {count}
-          </div>*/}
         </div>
 
         <div className='naviSearch'>
-          <Button /*location={'제주'} date={image} people={image}*/ type="submit"></Button>
+          {/*<a href="../Store/Result">*/}
+          <a href="../Store/Reserve">
+            <Button /*location={'제주'} date={image} people={image}*/ type="submit"></Button>
+          </a>
         </div>
 
       </div>
@@ -71,15 +67,6 @@ const Nav = () => {
           <LanguageIcon />
         </div>
         <Login></Login>
-        
-        {/* <button type='button' className='naviRb'>
-          <div className='deha'>
-            <DehazeIcon />
-          </div>
-          <div className='account'>
-            <AccountCircleIcon />
-          </div>
-        </button> */}
       </div>
 
     </div>

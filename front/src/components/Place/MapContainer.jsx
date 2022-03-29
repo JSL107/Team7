@@ -69,6 +69,18 @@ const Map= () => {
   return (
     <div className='mapContainer'>
       <div id="map" style={{ width: "600px", height: "500px" }}></div>
+      <div id="menu_wrap" class="bg_white">
+        <div class="option">
+            <div>
+                <form onsubmit="searchPlaces(); return false;">
+                    키워드 : <input type="text" value="제주 호텔" id="keyword" size="15"/> 
+                    <button type="submit">검색하기</button> 
+                </form>
+            </div>
+        </div>
+        <ul id="placesList"></ul>
+        <div id="pagination"></div>
+      </div>
     </div>
   );
 }

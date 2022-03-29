@@ -25,16 +25,8 @@ const Login = () => {
           </div>
         </button>
 
-        {/* <div className='naviRb' onClick={openModal}>
-        <AccountCircleIcon />
-        </div>
-
         <div>
-        <DehazeIcon />
-        </div> */}
-
-        <div>
-            <LoginModal open={modalOpen} close={closeModal}></LoginModal>
+          <LoginModal open={modalOpen} close={closeModal}></LoginModal>
         </div>
 
         </>

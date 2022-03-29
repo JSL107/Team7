@@ -4,7 +4,7 @@ import './Map.css'
 const { kakao } = window
 /*global kakao*/
 
-  const Map= () => {
+  const Map= ({searchPlace}) => {
     const { kakao } = window
     /*global kakao*/
     
@@ -136,19 +136,18 @@ const { kakao } = window
   
       const getListItem = (index, places) => {
         var el = document.createElement('li'),
-        itemStr = '<span class="markerbg marker_' + (index+1) + '"></span>' +
-                  '<div class="info">' +
-                  '   <h5>' + places.place_name + '</h5>';
+        itemStr = '<span class="markerbg marker_' + (index+1) + '"></span>' 
+                + '   <h5>' + places.place_name + '</h5>';
   
-        if (places.road_address_name) {
-          itemStr += '    <span>' + places.road_address_name + '</span>' +
-                      '   <span class="jibun gray">' +  places.address_name  + '</span>';
-        } else {
-          itemStr += '    <span>' +  places.address_name  + '</span>'; 
-        }
+        //if (places.road_address_name) {
+          //itemStr += '    <span>' + places.road_address_name + '</span>' 
+                      // + '   <span class="jibun gray">' +  places.address_name  + '</span>';
+        //} 
+        // else {
+        //   itemStr += '    <span>' +  places.address_name  + '</span>'; 
+        // }
                       
-        itemStr += '  <span class="tel">' + places.phone  + '</span>' +
-                    '</div>';           
+        //itemStr += '  <span class="tel">' + places.phone  + '</span>' + '</div>';           
   
         el.innerHTML = itemStr;
         el.className = 'item';

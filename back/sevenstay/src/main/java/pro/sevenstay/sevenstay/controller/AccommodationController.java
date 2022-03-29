@@ -12,7 +12,7 @@ import pro.sevenstay.sevenstay.service.AccommodationService;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/api/v1/")
+@RequestMapping("/accommodation")
 public class AccommodationController {
     private final AccommodationService accommodationService;
 
