@@ -34,7 +34,6 @@ const List = () => {
     }
 
     console.log(lists);
-
   return (
 
     <div>

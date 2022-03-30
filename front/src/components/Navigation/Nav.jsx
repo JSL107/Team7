@@ -10,14 +10,14 @@ import './Nav.css';
 
 const Nav = () => {
 
-  const [loc, setLoc]=useState();
+  const [location, setLocation]=useState();
   
-  const locationData = (location) => {
-    let loc2 = localStorage.setItem("위치", JSON.stringify(location));
-    console.log(loc2);
-    setLoc(loc2);
+  const locationData = () => {
+    let data = localStorage.setItem("위치", document.getElementById('naviInput').value);
+    setLocation(data);
     
   }
+console.log(location);
 
   return (
 
@@ -31,7 +31,7 @@ const Nav = () => {
       <div className='naviCenter'>
         <div className='naviContent' id='navidnlcl'>
           <div className='naviLocation'>위치</div>
-          <input id="naviInput" className="naviInput" placeholder='어디로 여행가세요?' onChange={locationData}>{loc}</input>
+          <input id="naviInput" className="naviInput" placeholder='어디로 여행가세요?' onChange={locationData}>{localStorage.getItem("위치")}</input>
         </div>
 
         <div className="naviLine" />
