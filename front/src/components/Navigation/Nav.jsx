@@ -1,5 +1,5 @@
 import LanguageIcon from '@mui/icons-material/Language';
-import React from 'react';
+import React, {useState} from 'react';
 import image from '../Navigation/images/7stay.png';
 import Calender from './Calender';
 import Button from '../Layout/Button'
@@ -9,7 +9,11 @@ import './Nav.css';
 
 
 const Nav = () => {
+  const [loc, setLoc]=useState();
   
+  let loc2 = localStorage.setItem("위치", loc);
+  setLoc(loc2);
+  console.log(localStorage.setItem("위치"));
   //console.log(localStorage.getItem('체크인날짜'));
   //console.log(localStorage.getItem('체크아웃날짜'));
   return (
@@ -24,7 +28,7 @@ const Nav = () => {
       <div className='naviCenter'>
         <div className='naviContent' id='navidnlcl'>
           <div className='naviLocation'>위치</div>
-          <input id="naviInput" className="naviInput" placeholder='어디로 여행가세요?' />
+          <input id="naviInput" className="naviInput" placeholder='어디로 여행가세요?'>{localStorage.getItem("위치")}</input>
         </div>
 
         <div className="naviLine" />

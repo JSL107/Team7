@@ -12,7 +12,7 @@ const ACCOM = [
 
 ];
 
-const BASE_URL = 'http://localhost:8090/orders/post';
+const BASE_URL = 'http://localhost:8090/accommodation';
 // /order/post
 console.log(localStorage.getItem("체크인날짜"));
 console.log(localStorage.getItem("체크아웃날짜"));
@@ -20,8 +20,24 @@ console.log(localStorage.getItem("체크아웃날짜"));
 const List = () => {
     const [lists, setLists] = useState(ACCOM);
     
+    const reserveHandler = async () => {
+      await fetch(BASE_URL, 
+        {
+          method: 'POST',
+          headers: {
 
-    useEffect(() => {
+          },
+          body: JSON.stringtify({
+            city: localStorage.getItem(""), 
+            checkIn: localStorage.getItem("체크인날짜"),
+            checkOut: localStorage.getItem("체크아웃날짜"),
+            people: localStorage.getItem("총사람수"),
+          })
+        });
+        setLists();
+    }
+
+    /*useEffect(() => {
         const fetchAccoms = async () => {
         const response = await fetch(BASE_URL);
 
@@ -54,13 +70,14 @@ const List = () => {
           checkOut={list.checkOut}
           people={list.people}
         />
-      ));
+      ));*/
 
   return (
 
     <div>
-      {localStorage.getItem("체크인")}
-      {accomsList}
+      {/* {localStorage.getItem("체크인")}
+      {accomsList} */}
+      <button onClick={reserveHandler}>ㅇㅇ</button>
     </div>
 
   )

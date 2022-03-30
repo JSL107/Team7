@@ -39,7 +39,7 @@ const Calender = () => {
 
       <div className="datePicker" id="in">
         <div className='naviCheckin' onClick={openModal}>체크인</div>
-        <CalenderModal open={modalOpen} close={closeModal} dates={setTransDate} dateData={setTransDate} />
+        <CalenderModal open={modalOpen} close={closeModal} dates={setTransDate}/>
         <div id="datePickerText1" type="text" className='datePickerText' onClick={openModal}> {localStorage.getItem('체크인날짜') ?? "날짜 선택"}</div>
       </div>
 
@@ -47,7 +47,7 @@ const Calender = () => {
 
       <div className="datePicker" id="out">
         <div className='naviCheckout' onClick={openModal}>체크아웃</div>
-        <CalenderModal open={modalOpen} close={closeModal} dates={setTransDate} dateData={setTransDate} />
+        <CalenderModal open={modalOpen} close={closeModal} dates={setTransDate}/>
         <div id="datePickerText2" className='datePickerText' onClick={openModal}> {localStorage.getItem('체크아웃날짜') ?? "날짜 선택"}</div>
         <div className="naviDate">
         </div>
