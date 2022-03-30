@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import ReserveResult from './ReserveResult';
+import React, { useState } from 'react';
 
 const ACCOM = [
     {
-        id: "dum1",
         city: localStorage.getItem("위치"),
         checkIn: localStorage.getItem("체크인날짜"), 
         checkOut: localStorage.getItem("체크아웃날짜"),
@@ -22,22 +20,25 @@ const List = () => {
         {
           method: 'POST',
           headers: {
-
           },
-          body: JSON.stringtify({
+
+          body: JSON.stringify({
             city: localStorage.getItem("위치"), 
             checkIn: localStorage.getItem("체크인날짜"),
             checkOut: localStorage.getItem("체크아웃날짜"),
             people: localStorage.getItem("총사람수"),
           })
+
         });
         setLists();
     }
+
     console.log(lists);
+
   return (
 
     <div>
-      <button onClick={reserveHandler}>ㅇㅇ</button>
+      <button onClick={reserveHandler}>예약하기</button>
     </div>
 
   )

@@ -13,7 +13,7 @@ const Nav = () => {
   const [loc, setLoc]=useState();
   
   const locationData = (location) => {
-    let loc2 = localStorage.setItem("위치", location);
+    let loc2 = localStorage.setItem("위치", JSON.stringify(location));
     console.log(loc2);
     setLoc(loc2);
     

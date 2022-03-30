@@ -25,15 +25,7 @@ const BASE_URL = 'http://localhost:8090/api/v1/acccomm';
 
 const Result = () => {
     const [books, setBooks] = useState(BOOKS);
-    //DUMMY BOOKS 확인용
-      // const booksList = books.map((book) => (
-      //   <li key={book.id}>
-      //     <h3>{book.name}</h3>
-      //     <div>{book.description}</div>
-      //     <div>{book.author}</div>
-      //   </li>
-      // ));
-
+  
     // 3. firebase를 활용하여 DUMMY DATA GET.
     useEffect(() => {
         console.log('호출');
