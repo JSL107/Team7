@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
+import Accom from './Accom';
+import List from './List';
 
 const ACCOM = [
     {
@@ -12,7 +14,7 @@ const ACCOM = [
 
 const BASE_URL = 'http://localhost:8090/accommodation';
 
-const List = () => {
+const Reserve = () => {
     const [lists, setLists] = useState(ACCOM);
     
     const reserveHandler = async () => {
@@ -33,15 +35,19 @@ const List = () => {
         });
         setLists();
     }
-
     console.log(lists);
+
   return (
-
-    <div>
-      <button onClick={reserveHandler}>예약하기</button>
-    </div>
-
+    <>
+      <div>
+        <input type="text" placeholder="search" value={localStorage.getItem("위치")} />
+        <button className="ReserveBtn" onClick={reserveHandler}>예약하기</button>
+      </div>
+      <div className="accomsList">
+        <List />
+      </div>
+    </>
   )
 }
 
-export default List
+export default Reserve

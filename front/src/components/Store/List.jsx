@@ -55,6 +55,8 @@ const List = () => {
         />
       ));
 
+      const accomsListSlice = accomsList.slice(0, 10);
+
   return (
 
     <div>

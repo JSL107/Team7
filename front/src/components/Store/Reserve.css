@@ -1,4 +1,7 @@
-.title {
-    border: 10px solid black;
-    margin: 100px;
+.accoms {
+    border: 1px solid black;
+}
+
+.ReserveBtn {
+    border: 5px solid black;
 }
