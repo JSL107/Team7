@@ -31,14 +31,22 @@ const List = (click) => {
         for (const key in responseData) {
             if(localStorage.getItem("위치")==responseData[key].city){
                 listsData.push({
+                    id: key,
+                    city: responseData[key].city,
+                    accommodationName: responseData[key].accommodationName,
+                    address: responseData[key].address,
+                    phoneNumber: responseData[key].phoneNumber,
+                    });
+            } else if(localStorage.getItem("위치")==null) {
+                listsData.push({
                 id: key,
                 city: responseData[key].city,
                 accommodationName: responseData[key].accommodationName,
                 address: responseData[key].address,
                 phoneNumber: responseData[key].phoneNumber,
-                });
-            }
+                });}
             
+            console.log(responseData[key].city);
         }
 
         setLists(listsData);
@@ -51,7 +59,7 @@ const List = (click) => {
 
     console.log(lists);
     const accomsList = lists.map((list) => (
-        <Accom onClick={click}
+        <Accom click={click.click}
           key={list.id}
           id={list.id}
           city={list.city}

@@ -37,6 +37,8 @@ const Reserve = () => {
 
         });
         setLists();
+
+        localStorage.clear();
     }
 
   return (

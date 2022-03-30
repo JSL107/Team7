@@ -14,9 +14,9 @@ const Accom = (props) => {
   return (
     <div className="accomAccom">
       <div className="borderTop"/>
-      <div className="accoms">
+      <div onClick={props.click} className="accoms">
         <div className="accomImages"> 
-          <img className="accomImage" src="https://yaimg.yanolja.com/v5/2022/03/02/17/1280/621fa2ba34e367.82549922.jpg"/>
+          <img className="accomImage" src="https://yaimg.yanolja.com/v5/2022/03/02/17/1280/621fa2ba34e367.82549922.jpg" />
         </div>
         <div className="accom__info">
           <div className="accom__info__top">
