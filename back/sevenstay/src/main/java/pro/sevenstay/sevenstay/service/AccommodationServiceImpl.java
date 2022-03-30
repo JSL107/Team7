@@ -20,6 +20,7 @@ public class AccommodationServiceImpl implements AccommodationService{
     @Override
     public List<AccommodationDTO> findAllAccommo(){
         List<Accommodation> list = accommodationRepository.findAll();
+        
         List<AccommodationDTO> result = list.stream().map(r -> new AccommodationDTO(r)).collect(Collectors.toList());
         return result;
     }

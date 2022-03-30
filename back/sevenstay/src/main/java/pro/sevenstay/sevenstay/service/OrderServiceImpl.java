@@ -1,26 +1,39 @@
-// package pro.sevenstay.sevenstay.service;
+/*package pro.sevenstay.sevenstay.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import pro.sevenstay.sevenstay.model.dto.OrderDTO;
+import pro.sevenstay.sevenstay.model.entity.Accommodation;
+import pro.sevenstay.sevenstay.model.entity.Order;
+import pro.sevenstay.sevenstay.model.repository.AccommodationRepository;
+import pro.sevenstay.sevenstay.model.repository.OrderRepository;
 
-// import org.springframework.beans.factory.annotation.Autowired;
-// import org.springframework.stereotype.Service;
+@Service
+public class OrderServiceImpl implements OrderService{
+    @Autowired
+    OrderRepository orderRepository;
 
-// import pro.sevenstay.sevenstay.model.dto.AccommodationDTO;
-// import pro.sevenstay.sevenstay.model.dto.OrderDTO;
-// import pro.sevenstay.sevenstay.model.entity.Accommodation;
-// import pro.sevenstay.sevenstay.model.entity.Order;
-// import pro.sevenstay.sevenstay.model.repository.AccommodationRepository;
-// import pro.sevenstay.sevenstay.model.repository.OrderRepository;
+    @Autowired
+    AccommodationRepository accommodationRepository;
 
-// @Service
-// public class OrderServiceImpl implements OrderService{
+    @Override
+    public void insertOrder(OrderDTO orderDTO) {
+        
+        //accommodatiion.finyByCity()로 도시이름을 통해 Location을 찾고싶음
+        Accommodation accommodation = accommodationRepository.findByCity(orderDTO.getLocation());
 
-//     @Autowired
-//     OrderRepository orderRepository;
+        Order order = new Order();
+        order.setCheckIn(orderDTO.getCheckIn());
+        order.setCheckOut(orderDTO.getCheckOut());
+        order.setGuest(orderDTO.getGuest());
+        order.setAccommodationName(orderDTO.getAccommodationName());
 
-//     @Autowired
-//     AccommodationRepository accommodationRepository;
+        order.setAccommodation(accommodation);
+        orderRepository.save(order);
+        
+    }
 
    
-    
-// }
+}
+*/

@@ -10,7 +10,8 @@ import './Nav.css';
 
 const Nav = () => {
   
-  console.log(localStorage.getItem('체크인날짜'));
+  //console.log(localStorage.getItem('체크인날짜'));
+  //console.log(localStorage.getItem('체크아웃날짜'));
   return (
 
     <div className='navicontainer'>
