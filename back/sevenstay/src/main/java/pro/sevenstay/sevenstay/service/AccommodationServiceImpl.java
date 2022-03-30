@@ -25,18 +25,18 @@ public class AccommodationServiceImpl implements AccommodationService{
         return result;
     }
 
-    @Override
-        public void insertAccommodation(AccommodationDTO accommodationDTO) {
+    // @Override
+    //     public void insertAccommodation(AccommodationDTO accommodationDTO) {
     
-                Accommodation accommo = new Accommodation();
-                accommo.setAccommodationName("석이네 민박");
-                accommo.setAddress("서귀포시");
-                accommo.setCity("제주");
-                accommo.setId(2l);
-                accommo.setPhoneNumber("010-0000-0000");
+    //             Accommodation accommo = new Accommodation();
+    //             accommo.setAccommodationName("석이네 민박");
+    //             accommo.setAddress("서귀포시");
+    //             accommo.setCity("제주");
+    //             accommo.setId(2l);
+    //             accommo.setPhoneNumber("010-0000-0000");
         
-                accommodationRepository.save(accommo);
+    //             accommodationRepository.save(accommo);
                 
-            }
+    //         }
 
 }

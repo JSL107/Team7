@@ -16,6 +16,7 @@ import pro.sevenstay.sevenstay.service.AccommodationService;
 @RestController
 @RequestMapping(path = "/accommodation") // /accommodation/get
 public class AccommodationController {
+
     private final AccommodationService accommodationService;
 
     public AccommodationController(AccommodationService accommodationService) {
@@ -27,9 +28,9 @@ public class AccommodationController {
         return accommodationService.findAllAccommo();
     }
 
-    @PostMapping("/post") // POST
-    public void insertAccommodation(@RequestBody AccommodationDTO accommodationDTO) {
-        accommodationService.insertAccommodation(accommodationDTO);
+    // @PostMapping("/post") // POST
+    // public void insertAccommodation(@RequestBody AccommodationDTO accommodationDTO) {
+    //     accommodationService.insertAccommodation(accommodationDTO);
 
-    }
+    // }
 }
