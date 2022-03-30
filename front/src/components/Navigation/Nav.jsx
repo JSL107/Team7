@@ -9,13 +9,16 @@ import './Nav.css';
 
 
 const Nav = () => {
+
   const [loc, setLoc]=useState();
   
-  let loc2 = localStorage.setItem("위치", loc);
-  setLoc(loc2);
-  console.log(localStorage.setItem("위치"));
-  //console.log(localStorage.getItem('체크인날짜'));
-  //console.log(localStorage.getItem('체크아웃날짜'));
+  const locationData = (location) => {
+    let loc2 = localStorage.setItem("위치", location);
+    console.log(loc2);
+    setLoc(loc2);
+    
+  }
+
   return (
 
     <div className='navicontainer'>
@@ -28,7 +31,7 @@ const Nav = () => {
       <div className='naviCenter'>
         <div className='naviContent' id='navidnlcl'>
           <div className='naviLocation'>위치</div>
-          <input id="naviInput" className="naviInput" placeholder='어디로 여행가세요?'>{localStorage.getItem("위치")}</input>
+          <input id="naviInput" className="naviInput" placeholder='어디로 여행가세요?' onChange={locationData}>{loc}</input>
         </div>
 
         <div className="naviLine" />

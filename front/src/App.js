@@ -15,7 +15,6 @@ function App() {
 
        <BrowserRouter>
 
-        {/* Nav 입력 데이터를 App.js -> 전부 props화 ->   */}
          <Nav>
             <CalenderModal/>
          </Nav>

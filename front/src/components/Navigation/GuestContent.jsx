@@ -4,7 +4,6 @@ import './GuestModal.css'
 const GuestContent = (props) => {
     const { open, close } = props;
 
-    // const [number, setNumber] = useState(0);
     const [counterPeople, setCounterPeople] = useState(0);
     const [counterChild, setCounterChild] = useState(0);
     const [counterBaby, setCounterBaby] = useState(0);

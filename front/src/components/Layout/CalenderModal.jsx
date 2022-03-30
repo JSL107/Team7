@@ -12,7 +12,7 @@ const CalenderModal = (props) => {
     const [startDate, endDate] = dateRange;
 
     const selectedDate = (dates) => {
-        props.dateData(dates);
+        props.dates(dates);
     }
 
     return (
@@ -23,9 +23,6 @@ const CalenderModal = (props) => {
                     <header><p className='title'>달력</p></header>
 
                     <main>
-
-                        {/* 2개로 나눠서 값을 받고 [0]번 배열이 [1]번 배열보다 작을 시 값을 초기화 하기*/}
-
                         <DatePicker
                             selectsRange={true}
                             locale={ko}
