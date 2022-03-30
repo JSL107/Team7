@@ -18,11 +18,11 @@ function App() {
         <Nav>
           <CalenderModal/>
         </Nav>
-        
+
         <Routes>
          <Route path="/" element={<Home/>}> </Route> 
          <Route path="/Store/Result" element={<Result/>}> </Route>
-         <Route path="/Store/Result" element={<Reserve/>}> </Route>  
+         <Route path="/Store/Reserve" element={<Reserve/>}> </Route>
          <Route path="/Store/List" element={<List/>}> </Route> 
          <Route path="/Layout/Place/:id" element={<Place/>}> </Route>
         </Routes>

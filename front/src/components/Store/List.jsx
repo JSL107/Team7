@@ -9,7 +9,6 @@ const ACCOM = [
         address: "제주시 어쩌구 저쩌구",
         phoneNumber: "000-000-0000" ,
     }
-
 ];
 
 const BASE_URL = 'http://localhost:8090/accommodation/get';

@@ -20,6 +20,7 @@ const BOOKS = [
   },
 ]
 
+//TEST DB로 연습한 것
 const BASE_URL = 'http://localhost:8090/api/v1/acccomm';
 
 const Result = () => {
