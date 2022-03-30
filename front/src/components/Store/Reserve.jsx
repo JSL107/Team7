@@ -42,10 +42,10 @@ const Reserve = () => {
   return (
     <>
       <div>
-        <button className="ReserveBtn" >예약하기</button>
+        <button className="ReserveBtn" onClick={reserveHandler}>예약하기</button>
       </div>
       <div className="accomsList">
-        <List onClick={reserveHandler} />
+        <List click={reserveHandler} />
       </div>
     </>
   )

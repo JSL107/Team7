@@ -13,7 +13,7 @@ const ACCOM = [
 
 const BASE_URL = 'http://localhost:8090/accommodation/get';
 
-const List = () => {
+const List = (click) => {
 
     const [lists, setLists] = useState(ACCOM);
 
@@ -51,7 +51,7 @@ const List = () => {
 
     console.log(lists);
     const accomsList = lists.map((list) => (
-        <Accom
+        <Accom onClick={click}
           key={list.id}
           id={list.id}
           city={list.city}
