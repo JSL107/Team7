@@ -31,7 +31,7 @@ public class AccommodationServiceImpl implements AccommodationService{
                 accommo.setAccommodationName("석이네 민박");
                 accommo.setAddress("서귀포시");
                 accommo.setCity("제주");
-                accommo.setId("2");
+                accommo.setId(2l);
                 accommo.setPhoneNumber("010-0000-0000");
         
                 accommodationRepository.save(accommo);

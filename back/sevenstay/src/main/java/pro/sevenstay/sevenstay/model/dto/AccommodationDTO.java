@@ -4,7 +4,7 @@ import pro.sevenstay.sevenstay.model.entity.Accommodation;
 
 public class AccommodationDTO {
     
-    private String id;
+    private Long id;
     private String city; // 시 , 도시위치
     private String accommodationName; // 숙소명
     private String address; // 주소
@@ -15,7 +15,7 @@ public class AccommodationDTO {
     }
 
 
-    public AccommodationDTO(String id ,String city, String accommodationName, String address, String phoneNumber) {
+    public AccommodationDTO(Long id ,String city, String accommodationName, String address, String phoneNumber) {
     }
 
 
@@ -28,12 +28,12 @@ public class AccommodationDTO {
     }
 
     
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

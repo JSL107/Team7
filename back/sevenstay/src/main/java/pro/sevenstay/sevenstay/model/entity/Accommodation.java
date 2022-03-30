@@ -2,26 +2,32 @@ package pro.sevenstay.sevenstay.model.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Accommodation {
     @Id 
+<<<<<<< HEAD
     // @GeneratedValue(strategy = GenerationType.IDENTITY)
+=======
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+>>>>>>> d72b51a38ea4fdb12c0a695baf24b8d2cf843985
     @Column(name = "Accommodation_ID")
-    private String id;
+    private Long id;
+    @Column(name = "Accommodation_city")
     private String city;
-    // Accommodation_Name
     private String accommodationName;
     @Column(name = "Accommodation_address")
     private String address;
-    // Phone_Number
+    @Column(name = "Accommodation_phone_number")
     private String phoneNumber;
 
     public Accommodation() {
     }
 
-    public Accommodation(String id, String city, String accommodationName, String address, String phoneNumber) {
+    public Accommodation(Long id, String city, String accommodationName, String address, String phoneNumber) {
         this.id = id;
         this.city = city;
         this.accommodationName = accommodationName;
@@ -29,11 +35,11 @@ public class Accommodation {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
