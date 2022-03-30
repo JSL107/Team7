@@ -67,10 +67,16 @@
 }
 
 .price {
-    margin-top: 0.25rem;
+    margin-top: 2.3rem;
+    margin-right: 10px;
     font-weight: bold;
     color: #4a69bd;
     font-size: 1.25rem;
+    text-align: right;
+}
+
+.pricebac {
+    font-weight: normal;
 }
 
 .borderTop {

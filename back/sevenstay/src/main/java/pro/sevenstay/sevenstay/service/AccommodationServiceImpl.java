@@ -20,9 +20,22 @@ public class AccommodationServiceImpl implements AccommodationService{
     @Override
     public List<AccommodationDTO> findAllAccommo(){
         List<Accommodation> list = accommodationRepository.findAll();
-
         List<AccommodationDTO> result = list.stream().map(r -> new AccommodationDTO(r)).collect(Collectors.toList());
         return result;
     }
+
+    @Override
+        public void insertAccommodation(AccommodationDTO accommodationDTO) {
+    
+                Accommodation accommo = new Accommodation();
+                accommo.setAccommodationName("석이네 민박");
+                accommo.setAddress("서귀포시");
+                accommo.setCity("제주");
+                accommo.setId("2");
+                accommo.setPhoneNumber("010-0000-0000");
+        
+                accommodationRepository.save(accommo);
+                
+            }
 
 }

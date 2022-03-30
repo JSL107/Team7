@@ -2,21 +2,22 @@ package pro.sevenstay.sevenstay.model.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Accommodation {
-    @Id
+    @Id 
     // @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+
     @Column(name = "Accommodation_ID")
     private String id;
-
     private String city;
+    // Accommodation_Name
     private String accommodationName;
     @Column(name = "Accommodation_address")
     private String address;
+    // Phone_Number
     private String phoneNumber;
 
     public Accommodation() {

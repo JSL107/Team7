@@ -10,6 +10,15 @@ public class AccommodationDTO {
     private String address; // 주소
     private String phoneNumber; // 전화번호
 
+
+    public AccommodationDTO() {
+    }
+
+
+    public AccommodationDTO(String id ,String city, String accommodationName, String address, String phoneNumber) {
+    }
+
+
     public AccommodationDTO(Accommodation accommodation) {
         this.id = accommodation.getId();
         this.city = accommodation.getCity();
