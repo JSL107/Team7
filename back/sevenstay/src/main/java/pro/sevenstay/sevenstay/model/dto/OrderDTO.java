@@ -1,35 +1,82 @@
-// package pro.sevenstay.sevenstay.model.dto;
+package pro.sevenstay.sevenstay.model.dto;
 
-// public class OrderDTO {
-//     private String userName;
+import pro.sevenstay.sevenstay.model.entity.Accommodation;
 
-//     private String address;
+public class OrderDTO {
+    private String city;
 
+    private String checkIn;
 
-// public OrderDTO(String userName, String address) {
-//     this.userName = userName;
-//     this.address = address;
-// }
+    private String checkOut;
 
-// public String getUserName() {
-//     return userName;
-// }
+    private String people;
 
-// public void setUserName(String userName) {
-//     this.userName = userName;
-// }
+    private String accommodationName;
+    
+    private Accommodation accommodation;
 
-// public String getAddress() {
-//     return address;
-// }
+    public OrderDTO(String city, String checkIn, String checkOut, String people) {
+        this.city = city;
+        this.checkIn = checkIn;
+        this.checkOut = checkOut;
+        this.people = people;
+    }
 
-// public void setAddress(String address) {
-//     this.address = address;
-// }
+    public String getCity() {
+        return city;
+    }
 
-// @Override
-// public String toString() {
-//     return "OrderDTO [address=" + address + ", userName=" + userName + "]";
-// }
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-// }
+    public String getCheckIn() {
+        return checkIn;
+    }
+
+    public void setCheckIn(String checkIn) {
+        this.checkIn = checkIn;
+    }
+
+    public String getCheckOut() {
+        return checkOut;
+    }
+
+    public void setCheckOut(String checkOut) {
+        this.checkOut = checkOut;
+    }
+
+    public String getPeople() {
+        return people;
+    }
+
+    public void setPeople(String people) {
+        this.people = people;
+    }
+
+   
+
+    public String getAccommodationName() {
+        return accommodationName;
+    }
+
+    public void setAccommodationName(String accommodationName) {
+        this.accommodationName = accommodationName;
+    }
+
+    public Accommodation getAccommodation() {
+        return accommodation;
+    }
+
+    public void setAccommodation(Accommodation accommodation) {
+        this.accommodation = accommodation;
+    }
+
+    @Override
+    public String toString() {
+        return "OrderDTO [checkIn=" + checkIn + ", checkOut=" + checkOut + ", city=" + city + ", people=" + people
+                + "]";
+    }
+
+    
+}

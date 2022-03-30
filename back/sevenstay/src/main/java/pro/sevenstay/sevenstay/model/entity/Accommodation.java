@@ -20,16 +20,16 @@ public class Accommodation {
     @Column(name = "Accommodation_phone_number")
     private String phoneNumber;
 
-    public Accommodation() {
-    }
+    // public Accommodation() {
+    // }
 
-    public Accommodation(Long id, String city, String accommodationName, String address, String phoneNumber) {
-        this.id = id;
-        this.city = city;
-        this.accommodationName = accommodationName;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
-    }
+    // public Accommodation(Long id, String city, String accommodationName, String address, String phoneNumber) {
+    //     this.id = id;
+    //     this.city = city;
+    //     this.accommodationName = accommodationName;
+    //     this.address = address;
+    //     this.phoneNumber = phoneNumber;
+    // }
 
     public Long getId() {
         return id;

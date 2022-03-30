@@ -1,53 +1,86 @@
-// package pro.sevenstay.sevenstay.model.entity;
+package pro.sevenstay.sevenstay.model.entity;
 
-// import javax.persistence.Column;
-// import javax.persistence.Entity;
-// import javax.persistence.GeneratedValue;
-// import javax.persistence.GenerationType;
-// import javax.persistence.Id;
-// import javax.persistence.JoinColumn;
-// import javax.persistence.ManyToOne;
-// import javax.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
-// @Entity
-// @Table(name="ORDERS")
-// public class Order {
+@Entity
+@Table(name="ORDERS")
+public class Order {
     
-//     @Id
-//     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//     @Column(name="ORDER_ID")
-//     private String userName;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="ORDER_ID")
+    private Long id;
 
-//     private String address;
+    @Column(name="ORDER_CITY")
+    private String city;
 
-//     @ManyToOne
-//     @JoinColumn(name = "ACCOMMODATION_ID")
-//     private Accommodation accomodation;
+    @Column(name="ORDER_CHECKIN")
+    private String checkIn;
 
-//     public String getUserName() {
-//         return userName;
-//     }
+    @Column(name="ORDER_CHECKOUT")
+    private String checkOut;
 
-//     public void setUserName(String userName) {
-//         this.userName = userName;
-//     }
+    @Column(name="ORDER_PEOPLE")
+    private String people;
 
-//     public String getAddress() {
-//         return address;
-//     }
+    @ManyToOne
+    @JoinColumn(name = "Accommodation_ID")
+    private Accommodation accomodation;
 
-//     public void setAddress(String address) {
-//         this.address = address;
-//     }
+    public Long getId() {
+        return id;
+    }
 
-//     public Accommodation getAccomodation() {
-//         return accomodation;
-//     }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-//     public void setAccomodation(Accommodation accomodation) {
-//         this.accomodation = accomodation;
-//     }
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCheckIn() {
+        return checkIn;
+    }
+
+    public void setCheckIn(String checkIn) {
+        this.checkIn = checkIn;
+    }
+
+    public String getCheckOut() {
+        return checkOut;
+    }
+
+    public void setCheckOut(String checkOut) {
+        this.checkOut = checkOut;
+    }
+
+    public String getPeople() {
+        return people;
+    }
+
+    public void setPeople(String people) {
+        this.people = people;
+    }
+
+    public Accommodation getAccomodation() {
+        return accomodation;
+    }
+
+    public void setAccomodation(Accommodation accomodation) {
+        this.accomodation = accomodation;
+    }
 
     
-    
-// }
+}
