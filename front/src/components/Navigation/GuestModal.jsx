@@ -10,28 +10,6 @@ const GuestModal = (props) => {
   const [counterBaby, setCounterBaby] = useState(0);
   const [counterAnimal, setCounterAnimal] = useState(0);
 
-  // const categories = [
-  //   {key: "id1", id: "adult", name: "성인"},
-  //   {key: "id2", id: "child", name: "어린이"},
-  //   {key: "id3", id: "baby", name: "유아"},
-  //   {key: "id4", id: "animal", name: "반려동물"}
-  // ];
-
-  //  const [number, setNumber] = useState({
-  //    adult: 0, child: 0, baby: 0, animal: 0
-  //  })
-
-  // const increaseNumber = () => {
-  //   setNumber(number+1);
-  // }
-  
-  // const decreaseNumber = () => {
-  //   if(number === 0){
-  //     return;  
-  //   }
-  //   setNumber(number-1);
-  // }
-
   const decreaseNumber = () => { 
     if (counterPeople === 0) 
     {return;} 
@@ -43,9 +21,6 @@ const GuestModal = (props) => {
   }
 
   const totalGuest = counterPeople + counterChild + counterBaby + counterAnimal;
-  //console.log({counterPeople});
-  console.log(totalGuest);
-
 
   return (
     <div className={open ? 'openModal modal' : 'modal'}>
