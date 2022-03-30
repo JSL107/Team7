@@ -14,19 +14,6 @@ const Book = (props) => {
     setActive(!isActive);
   };
 
-  /*const cartContext = useContext(CartContext);
-
-  const addItemToCartHandler = amount => {
-    // console.log(amount);
-    cartContext.addItem({
-      id: props.id,
-      location: props.location,
-      checkin: props.checkin,
-      checkout: props.checkout,
-      guest: props.guest
-    })
-  } */
-
   return (
     
   <div className="bookBook">
@@ -46,16 +33,6 @@ const Book = (props) => {
         <div className="description">{props.location} - {props.address}</div>
         <div className="price">￦{props.price} <span className="pricebac">/ 박</span></div>
       </div>
-
-      {/*
-          <li className="book">
-      <div className="book__info">
-        <h3>{props.name} - <span className="author">{props.author}</span></h3>
-        <div className="description">{props.description}</div>
-        <div className="price">${props.price}</div>
-      </div>
-    </li>
-      */}
 
     </li>
     
