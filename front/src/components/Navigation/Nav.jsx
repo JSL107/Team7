@@ -22,6 +22,7 @@ const Nav = () => {
   return (
 
     <div className='navicontainer'>
+      <div className="naviEmpty"/>
       <a href='/'>
         <img className="storeTitle"
           src={image} alt="Seven stay title" />

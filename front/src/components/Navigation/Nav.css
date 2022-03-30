@@ -10,11 +10,15 @@
     /* text-align: left; */
 }
 
+.naviEmpty {
+    margin-left: 70px;
+}
+
 /*Title*/
 .navicontainer .storeTitle {
     float: left;
     font-size: 30px;
-    margin: 15px 0 15px 150px;
+    margin: 15px 0 15px 0px;
     display: block;
     text-align: center;
     white-space: nowrap;
