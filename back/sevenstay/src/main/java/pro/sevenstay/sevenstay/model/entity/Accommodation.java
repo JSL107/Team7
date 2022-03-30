@@ -9,11 +9,7 @@ import javax.persistence.Id;
 @Entity
 public class Accommodation {
     @Id 
-<<<<<<< HEAD
-    // @GeneratedValue(strategy = GenerationType.IDENTITY)
-=======
     @GeneratedValue(strategy = GenerationType.IDENTITY)
->>>>>>> d72b51a38ea4fdb12c0a695baf24b8d2cf843985
     @Column(name = "Accommodation_ID")
     private Long id;
     @Column(name = "Accommodation_city")

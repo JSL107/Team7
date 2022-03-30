@@ -12,7 +12,7 @@ const ACCOM = [
 
 ];
 
-const BASE_URL = 'http://localhost:8090/accommodation';
+const BASE_URL = 'http://localhost:8090/accommodation/get';
 
 const List = () => {
     const [lists, setLists] = useState(ACCOM);

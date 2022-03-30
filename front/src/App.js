@@ -18,6 +18,7 @@ function App() {
         <Nav>
           <CalenderModal/>
         </Nav>
+        
         <Routes>
          <Route path="/" element={<Home/>}> </Route> 
          <Route path="/Store/Result" element={<Result/>}> </Route>

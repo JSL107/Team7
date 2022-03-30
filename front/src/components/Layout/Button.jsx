@@ -25,7 +25,7 @@ const Button = () => {
 
 
     //-------------------연습-----------------------
-    const orderContext = useContext(OrderContext);
+    /*const orderContext = useContext(OrderContext);
 
     const orderItems = (
       <>
@@ -38,7 +38,7 @@ const Button = () => {
         />
       ))}
       </>
-    );
+    );*/
     //------------------------------------
 
     return (     
