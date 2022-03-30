@@ -31,7 +31,7 @@ console.log(location);
       <div className='naviCenter'>
         <div className='naviContent' id='navidnlcl'>
           <div className='naviLocation'>위치</div>
-          <input id="naviInput" className="naviInput" placeholder='어디로 여행가세요?' onChange={locationData}>{localStorage.getItem("위치")}</input>
+          <input id="naviInput" className="naviInput" placeholder='어디로 여행가세요?' onChange={locationData}></input>
         </div>
 
         <div className="naviLine" />

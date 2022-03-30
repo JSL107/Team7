@@ -23,7 +23,6 @@ const Calender = () => {
       let day1 = dates.toLocaleDateString();
       date1 = localStorage.setItem('체크인날짜',day1);
       setDate1(date1);
-
     }
     else {
       setClick(true);
