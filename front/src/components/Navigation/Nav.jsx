@@ -7,17 +7,20 @@ import Guest from './Guest'
 import Login from './Login'
 import './Nav.css';
 
-
 const Nav = () => {
 
   const [location, setLocation]=useState();
+
+  const [letter, setLetter] = useState(localStorage.getItem("위치"));
   
-  const locationData = () => {
-    let data = localStorage.setItem("위치", document.getElementById('naviInput').value);
-    setLocation(data);
-    
+  const locationData = (datas) => {
+
+    console.log(datas);
+    let text = document.getElementById('naviInput').value;
+    setLocation(localStorage.setItem("위치", text));
+    setLetter(text);
   }
-console.log(location);
+
 
   return (
 
@@ -31,8 +34,8 @@ console.log(location);
       <div className='naviCenter'>
         <div className='naviContent' id='navidnlcl'>
           <div className='naviLocation'>위치</div>
-          <input id="naviInput" className="naviInput" placeholder='어디로 여행가세요?' onChange={locationData}></input>
-        </div>
+          <input id="naviInput" className="naviInput" placeholder='어디로 여행가세요?' onKeyUp={locationData} defaultValue={letter}></input>
+      </div>
 
         <div className="naviLine" />
 
