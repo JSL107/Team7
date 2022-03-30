@@ -8,8 +8,6 @@ import javax.persistence.Id;
 public class Accommodation {
     @Id 
     // @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-
     @Column(name = "Accommodation_ID")
     private String id;
     private String city;
