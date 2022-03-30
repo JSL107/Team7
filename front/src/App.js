@@ -5,7 +5,7 @@ import CalenderModal from './components/Layout/CalenderModal';
 import Home from './components/Layout/Home';
 import Result from './components/Store/Result'
 import Reserve from './components/Store/Reserve'
-import List from './components/Store/List'
+import List from './components/Store/Reserve'
 import Place from './components/Layout/Place';
 import Footer from './components/Layout/Footer';
 
@@ -22,8 +22,8 @@ function App() {
         <Routes>
          <Route path="/" element={<Home/>}> </Route> 
          <Route path="/Store/Result" element={<Result/>}> </Route>
-         <Route path="/Store/Result" element={<Reserve/>}> </Route>  
-         <Route path="/Store/List" element={<List/>}> </Route> 
+         <Route path="/Store/Reserve" element={<Reserve/>}> </Route>  
+         {/* <Route path="/Store/List" element={<List/>}> </Route>  */}
          <Route path="/Layout/Place/:id" element={<Place/>}> </Route>
         </Routes>
         <Footer/>
