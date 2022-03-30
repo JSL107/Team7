@@ -1,5 +1,5 @@
 import LanguageIcon from '@mui/icons-material/Language';
-import React, { useState } from 'react';
+import React from 'react';
 import image from '../Navigation/images/7stay.png';
 import Calender from './Calender';
 import Button from '../Layout/Button'
@@ -9,22 +9,8 @@ import './Nav.css';
 
 
 const Nav = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [count,setCount] = useState("게스트 추가");
   
-  const openModal = () => {
-    setModalOpen(true);
-  };
-  const closeModal = () => {
-    setModalOpen(false);
-  };
-  
-  const totalGuest = (count)=> {
-    {/* {totalGuest ? `게스트 ${totalGuest}명` : "게스트 추가"} */}
-    setCount(count)
-  };
-  console.log(count);
-
+  console.log(localStorage.getItem('체크인날짜'));
   return (
 
     <div className='navicontainer'>
@@ -43,7 +29,7 @@ const Nav = () => {
         <div className="naviLine" />
 
         <div className='naviContent' id="navi2" >   
-        <Calender></Calender>
+          <Calender></Calender>
         </div>
 
         <div className="naviLine" />
@@ -55,7 +41,7 @@ const Nav = () => {
         <div className='naviSearch'>
           {/*<a href="../Store/Result">*/}
           <a href="../Store/Reserve">
-            <Button /*location={'제주'} date={image} people={image}*/ type="submit"></Button>
+            <Button type="submit"></Button>
           </a>
         </div>
 

@@ -15,7 +15,6 @@ const CalenderModal = (props) => {
         props.dateData(dates);
     }
 
-
     return (
         <div className={props.open ? 'openModal modal' : 'modal'}>
             {props.open ? (

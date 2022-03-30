@@ -18,13 +18,10 @@ const List = () => {
     const [lists, setLists] = useState(ACCOM);
 
     useEffect(() => {
-        console.log('호출');
         const fetchAccoms = async () => {
         const response = await fetch(BASE_URL);
 
-        console.log(response.ok);
         const responseData =  await response.json();
-        console.log(responseData);
 
         const listsData = [];
         for (const key in responseData) {
@@ -41,7 +38,6 @@ const List = () => {
         }
 
         fetchAccoms().catch(error => {
-        console.log(error);
         })
     }, []);
 
