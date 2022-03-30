@@ -15,7 +15,6 @@ const Nav = () => {
   
   const locationData = (datas) => {
 
-    console.log(datas);
     let text = document.getElementById('naviInput').value;
     setLocation(localStorage.setItem("위치", text));
     setLetter(text);
