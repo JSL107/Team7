@@ -13,13 +13,11 @@ const Nav = () => {
 
   const [letter, setLetter] = useState(localStorage.getItem("위치"));
   
-  const locationData = (datas) => {
-
+  const locationData = () => {
     let text = document.getElementById('naviInput').value;
     setLocation(localStorage.setItem("위치", text));
     setLetter(text);
   }
-
 
   return (
 
@@ -51,7 +49,7 @@ const Nav = () => {
         <div className='naviSearch'>
           {/*<a href="../Store/Result">*/}
           <a href="../Store/Reserve">
-            <Button type="submit"></Button>
+            <Button type="submit" onClick={locationData}></Button>
           </a>
         </div>
 

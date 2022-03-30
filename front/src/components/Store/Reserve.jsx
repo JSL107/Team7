@@ -11,12 +11,15 @@ const ACCOM = [
     },
 
 ];
-
 const BASE_URL = 'http://localhost:8090/accommodation';
 
 const Reserve = () => {
     const [lists, setLists] = useState(ACCOM);
-    
+    const [location, setLocation] = useState(localStorage.getItem("위치"));
+
+
+
+
     const reserveHandler = async () => {
       await fetch(BASE_URL, 
         {
@@ -35,16 +38,14 @@ const Reserve = () => {
         });
         setLists();
     }
-    console.log(lists);
 
   return (
     <>
       <div>
-        <input type="text" placeholder="search" value={localStorage.getItem("위치")} />
-        <button className="ReserveBtn" onClick={reserveHandler}>예약하기</button>
+        <button className="ReserveBtn" >예약하기</button>
       </div>
       <div className="accomsList">
-        <List />
+        <List onClick={reserveHandler} />
       </div>
     </>
   )

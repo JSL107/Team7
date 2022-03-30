@@ -14,7 +14,9 @@ const ACCOM = [
 const BASE_URL = 'http://localhost:8090/accommodation/get';
 
 const List = () => {
+
     const [lists, setLists] = useState(ACCOM);
+
 
     useEffect(() => {
         console.log('호출');
@@ -23,17 +25,20 @@ const List = () => {
 
         console.log(response.ok);
         const responseData =  await response.json();
-        console.log(responseData);
+        // console.log(responseData);
 
         const listsData = [];
         for (const key in responseData) {
-            listsData.push({
-            id: key,
-            city: responseData[key].city,
-            accommodationName: responseData[key].accommodationName,
-            address: responseData[key].address,
-            phoneNumber: responseData[key].phoneNumber,
-            });
+            if(localStorage.getItem("위치")==responseData[key].city){
+                listsData.push({
+                id: key,
+                city: responseData[key].city,
+                accommodationName: responseData[key].accommodationName,
+                address: responseData[key].address,
+                phoneNumber: responseData[key].phoneNumber,
+                });
+            }
+            
         }
 
         setLists(listsData);
@@ -44,6 +49,7 @@ const List = () => {
         })
     }, []);
 
+    console.log(lists);
     const accomsList = lists.map((list) => (
         <Accom
           key={list.id}
@@ -58,7 +64,6 @@ const List = () => {
       const accomsListSlice = accomsList.slice(0, 10);
 
   return (
-
     <div>
         {accomsList}
     </div>
