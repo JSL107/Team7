@@ -8,7 +8,8 @@ import javax.persistence.Id;
 
 @Entity
 public class Accommodation {
-    @Id 
+
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Accommodation_ID")
     private Long id;
@@ -19,17 +20,6 @@ public class Accommodation {
     private String address;
     @Column(name = "Accommodation_phone_number")
     private String phoneNumber;
-
-    // public Accommodation() {
-    // }
-
-    // public Accommodation(Long id, String city, String accommodationName, String address, String phoneNumber) {
-    //     this.id = id;
-    //     this.city = city;
-    //     this.accommodationName = accommodationName;
-    //     this.address = address;
-    //     this.phoneNumber = phoneNumber;
-    // }
 
     public Long getId() {
         return id;

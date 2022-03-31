@@ -10,24 +10,24 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="ORDERS")
+@Table(name = "ORDERS")
 public class Order {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="ORDER_ID")
+    @Column(name = "ORDER_ID")
     private Long id;
 
-    @Column(name="ORDER_CITY")
+    @Column(name = "ORDER_CITY")
     private String city;
 
-    @Column(name="ORDER_CHECKIN")
+    @Column(name = "ORDER_CHECKIN")
     private String checkIn;
 
-    @Column(name="ORDER_CHECKOUT")
+    @Column(name = "ORDER_CHECKOUT")
     private String checkOut;
 
-    @Column(name="ORDER_PEOPLE")
+    @Column(name = "ORDER_PEOPLE")
     private String people;
 
     @ManyToOne
