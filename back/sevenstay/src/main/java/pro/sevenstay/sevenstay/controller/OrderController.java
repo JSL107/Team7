@@ -1,6 +1,5 @@
 package pro.sevenstay.sevenstay.controller;
 
-
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,16 +14,16 @@ import pro.sevenstay.sevenstay.service.OrderService;
 @RequestMapping("/accommodation")
 
 public class OrderController {
-    
+
     private final OrderService orderService;
-    
+
     public OrderController(OrderService orderService) {
         this.orderService = orderService;
     }
 
     @PostMapping() // POST: ~/accommodation
     public void insertOrder(@RequestBody OrderDTO orderDTO) {
-        
+
         orderService.insertOrder(orderDTO);
     }
 }

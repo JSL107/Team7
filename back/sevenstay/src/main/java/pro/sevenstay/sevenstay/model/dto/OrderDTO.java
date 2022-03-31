@@ -1,6 +1,5 @@
 package pro.sevenstay.sevenstay.model.dto;
 
-
 import pro.sevenstay.sevenstay.model.entity.Accommodation;
 
 public class OrderDTO {
@@ -11,7 +10,7 @@ public class OrderDTO {
     private String people;
 
     private String accommodationName;
-    
+
     private Accommodation accommodation;
 
     public OrderDTO(String city, String checkIn, String checkOut, String people) {
@@ -53,8 +52,6 @@ public class OrderDTO {
         this.people = people;
     }
 
-   
-
     public String getAccommodationName() {
         return accommodationName;
     }
@@ -77,5 +74,4 @@ public class OrderDTO {
                 + "]";
     }
 
-    
 }
