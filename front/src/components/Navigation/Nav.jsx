@@ -20,8 +20,7 @@ const Nav = () => {
     setLetter(text);
   }
 
-  localStorage.setItem("총사람수",0);
-  
+ 
   return (
     <div className='navi__container'>
       <div className="navi__empty"/>
