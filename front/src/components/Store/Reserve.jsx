@@ -15,7 +15,10 @@ const BASE_URL = 'http://localhost:8090/accommodation';
 
 const Reserve = () => {
     const [lists, setLists] = useState(ACCOM);
+<<<<<<< Updated upstream
     const [location, setLocation] = useState(localStorage.getItem("위치"));
+=======
+>>>>>>> Stashed changes
 
     const reserveHandler = async () => {
       await fetch(BASE_URL, 
@@ -36,6 +39,7 @@ const Reserve = () => {
         setLists();
 
         localStorage.clear();
+        localStorage.setItem("총사람수",0);
     }
 
   return (
