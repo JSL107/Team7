@@ -19,7 +19,7 @@ const LandingPage = (id) => {
 
   return (
     <>
-      <form className="inputForm" onSubmit={handleSubmit}></form>
+      <form className="input__form" onSubmit={handleSubmit}></form>
       {/*<MapContainer searchPlace={id.id} />*/}
       <Map searchPlace={id.id} />
     </>

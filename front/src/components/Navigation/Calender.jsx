@@ -34,18 +34,18 @@ const Calender = () => {
  
   return (
     <div className="calender">
-      <div className="datePicker" id="in">
-        <div className='naviCheckin' onClick={openModal}>체크인</div>
+      <div className="date__picker" id="in">
+        <div className='navi_checkin' onClick={openModal}>체크인</div>
         <CalenderModal open={modalOpen} close={closeModal} dates={setTransDate}/>
-        <div id="datePickerText1" type="text" className='datePickerText' onClick={openModal}> {localStorage.getItem('체크인날짜') ?? "날짜 선택"}</div>
+        <div id="datePickerText1" type="text" className='date__picker_text' onClick={openModal}> {localStorage.getItem('체크인날짜') ?? "날짜 선택"}</div>
       </div>
-      <div className="naviLine" />
+      <div className="navi__line" />
 
-      <div className="datePicker" id="out">
-        <div className='naviCheckout' onClick={openModal}>체크아웃</div>
+      <div className="date__picker" id="out">
+        <div className='navi__checkout' onClick={openModal}>체크아웃</div>
         <CalenderModal open={modalOpen} close={closeModal} dates={setTransDate}/>
-        <div id="datePickerText2" className='datePickerText' onClick={openModal}> {localStorage.getItem('체크아웃날짜') ?? "날짜 선택"}</div>
-        <div className="naviDate">
+        <div id="datePickerText2" className='date__picker_text' onClick={openModal}> {localStorage.getItem('체크아웃날짜') ?? "날짜 선택"}</div>
+        <div className="navi__date">
         </div>
       </div>
     </div>

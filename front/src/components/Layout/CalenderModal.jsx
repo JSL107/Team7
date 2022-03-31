@@ -19,7 +19,7 @@ const CalenderModal = (props) => {
         <div className={props.open ? 'openModal modal' : 'modal'}>
             {props.open ? (
 
-                <section className='section-datepicker'>
+                <section className='section__datepicker'>
                     <header><p className='title'>달력</p></header>
 
                     <main>

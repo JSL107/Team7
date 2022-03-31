@@ -22,8 +22,8 @@ const Guest = () => {
 
   return (
     <div>
-          <div className='naviGuest' onClick={openModal} >인원</div>
-          <div id="guestCount" className="naviAddGuest" onClick={openModal}>
+          <div className='navi__guest' onClick={openModal} >인원</div>
+          <div id="guestCount" className="navi__add__guest" onClick={openModal}>
             {localStorage.getItem('총사람수')+ "명" ?? "게스트 추가"}
           </div>
           <GuestContent open={modalOpen} close={closeModal} people={countPeople}></GuestContent>

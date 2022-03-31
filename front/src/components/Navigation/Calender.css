@@ -9,24 +9,24 @@
     padding: 0px;
 }
 
-.datePicker {
+.date__picker {
     padding: 9px 30px 9px 30px;
     width: 155px;
 }
 
-.datePicker:hover {
+.date__picker:hover {
     background-color: #EBEBEB;
     border-radius: 32px;
 }
 
-.naviLine {
+.navi__line {
     align-self: center;
     border-right: 1px solid #DDDDDD;
     height: 32px !important;
     flex: 0 0 0 ;
 }
 
-.datePickerText {
+.date__picker_text {
     border: none;
     outline-width: 0;
     border: 0;
@@ -42,7 +42,7 @@
 }
 
 @media screen and (max-width: 1568px){
-    .datePicker {
+    .date__picker {
         padding: 9px 20px 9px 20px;
         width: 64px;
     }

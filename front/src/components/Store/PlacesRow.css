@@ -1,34 +1,34 @@
-.rowContainer {
+.row__container {
     margin-bottom: 50px;
 }
 
-.rowContent {
+.row__content {
     margin-bottom: 30px;
     display: flex;
     justify-content: space-evenly
 }
 
-.rowContent .rowDesc {
+.row__content .row__desc {
     display: flex;
 }
 
-.rowContent .placesRow {
+.row__content .places__row {
     width: 400px;
     height: 400px;
     margin: 0px 15px;
     border-radius: 50px;
 }
 
-.placesBox{
+.places__box{
     display:inline-block;
     position: relative;
 }
 
-.placesBox:hover:after, .placesBox:hover > .placesText {
+.places__box:hover:after, .places__box:hover > .places__text {
   display:block;
 }
 
-.rowContent .placesText {
+.row__content .places__text {
     position: absolute;
     top: 140px;
     left: 40%;
@@ -38,11 +38,11 @@
     font-size: 30px;
 }
 
-.placesBox:after, .placesText{
+.places__box:after, .places__text{
     display:none;
 }
 
-.placesBox:after{
+.places__box:after{
     content:'';
     position: absolute;
     top: 0;
@@ -57,12 +57,12 @@
     border-radius: 50px;
 }
 
-.placesBox {
+.places__box {
     overflow: hidden;
 }
-.placesBox img{
+.places__box img{
     height: 340px;
 }
-.placesBox:hover img{
+.places__box:hover img{
        transition: 1s;
 }

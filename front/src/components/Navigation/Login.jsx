@@ -18,7 +18,7 @@ const Login = () => {
 
     return (
       <>
-        <button type='button' className='naviRb' onClick={openModal}>
+        <button type='button' className='navi__rb' onClick={openModal}>
           <div className='deha'>
             <DehazeIcon />
           </div>

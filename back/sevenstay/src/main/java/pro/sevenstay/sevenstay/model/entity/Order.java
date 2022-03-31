@@ -34,6 +34,9 @@ public class Order {
     @JoinColumn(name = "Accommodation_ID")
     private Accommodation accomodation;
 
+    @Column(name= "ACCOMMODATION_NAME")
+    private String accomodationName;
+
     public Long getId() {
         return id;
     }
@@ -80,6 +83,14 @@ public class Order {
 
     public void setAccomodation(Accommodation accomodation) {
         this.accomodation = accomodation;
+    }
+
+    public String getAccomodationName() {
+        return accomodationName;
+    }
+
+    public void setAccomodationName(String accomodationName) {
+        this.accomodationName = accomodationName;
     }
 
 }

@@ -8,7 +8,7 @@
     display: none; 
 }
 
-.modal > .section-datepicker  {
+.modal > .section__datepicker  {
     animation: modal-show 0.3s;
     width: auto;
     max-width: auto;
@@ -22,13 +22,13 @@
     background-color: #fff;
 }
 
-.modal > .section-datepicker > header {
+.modal > .section__datepicker > header {
     grid-column: 1 / span 2;
     display: grid;
     position: relative;
 }
 
-.modal > .section-datepicker > header > .title {
+.modal > .section__datepicker > header > .title {
     font-style: normal;
     font-size: 20px;
     margin : 10px 0;
@@ -36,19 +36,19 @@
     text-align: center;
 }
 
-.modal > .section-datepicker > main {
+.modal > .section__datepicker > main {
     display: grid;
     grid-template-columns: auto auto;
 }
 
 
-.modal > .section-datepicker > footer {
+.modal > .section__datepicker > footer {
     grid-column: 1 / span 2;
     padding: 16px 16px;
     text-align: center;
 }
 
-.modal > .section-datepicker > footer button {
+.modal > .section__datepicker > footer button {
     padding: 6px 12px;
     color: #fff;
     background-color: #273746;
@@ -56,7 +56,7 @@
     font-size: 15px;
 }
 
-.modal > .section-datepicker > footer button:focus {
+.modal > .section__datepicker > footer button:focus {
     background-color: #FF385C;
 }
 

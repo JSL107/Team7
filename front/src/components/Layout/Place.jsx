@@ -6,7 +6,7 @@ const Place = (props) => {
   const { id } = useParams();
 
   return (
-    <div className='placeContainer'>
+    <div className='place__container'>
       <h2> {id}지역 </h2>
       <LandingPage id = {props.id}/>
     </div>

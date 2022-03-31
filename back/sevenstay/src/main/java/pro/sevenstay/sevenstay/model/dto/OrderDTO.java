@@ -10,14 +10,19 @@ public class OrderDTO {
     private String people;
 
     private String accommodationName;
+    private Long id;
 
     private Accommodation accommodation;
+   
 
-    public OrderDTO(String city, String checkIn, String checkOut, String people) {
+    public OrderDTO(String city, String checkIn, String checkOut, String people, String accommodationName, Long id ) {
         this.city = city;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
         this.people = people;
+
+        this.accommodationName=accommodationName;
+        this.id=id;
     }
 
     public String getCity() {
@@ -66,6 +71,14 @@ public class OrderDTO {
 
     public void setAccommodation(Accommodation accommodation) {
         this.accommodation = accommodation;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @Override

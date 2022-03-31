@@ -6,14 +6,14 @@
     padding: 50px 50px;
 }
 
-.banner .bannerImage {
+.banner .banner__image {
     overflow: hidden;
     min-width: 101%;
     min-height: 101%;
     border-radius: 50px;
 }
 
-.bannerText {
+.banner__text {
     position: absolute;
     top: 80%;
     left: 20%;
@@ -22,11 +22,11 @@
     color: white;
 }
 
-.bannerText h1 {
+.banner__text h1 {
     font-size: 6rem;
 }
 
-.bannerText p {
+.banner__text p {
     font-size: 1.2rem;
     font-size: 20px;
 }

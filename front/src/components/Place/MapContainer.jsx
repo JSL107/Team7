@@ -51,6 +51,7 @@ const Map= () => {
         makeOutListener(infowindow)
       );
     });
+    
     // 인포윈도우를 표시하는 클로저를 만드는 함수입니다
     function makeOverListener(map, marker, infowindow) {
       return function () {
@@ -67,7 +68,7 @@ const Map= () => {
   };
 
   return (
-    <div className='mapContainer'>
+    <div className='map__container'>
       <div id="map" style={{ width: "600px", height: "500px" }}></div>
       <div id="menu_wrap" class="bg_white">
         <div class="option">
@@ -78,7 +79,7 @@ const Map= () => {
                 </form>
             </div>
         </div>
-        <ul id="placesList"></ul>
+        <ul id="places__list"></ul>
         <div id="pagination"></div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-.naviRb { /*margin 제거*/
+.navi__rb { /*margin 제거*/
     border-radius: 2rem;
     border:0;
     cursor:pointer;
@@ -12,15 +12,9 @@
     display: inline-flex;
 }
 
-.naviRb:hover {
+.navi__rb:hover {
     background-color: #FF385C;
 }
-
-.naviLang:hover {
-    background-color: rgba(185, 184, 184, 0.12);
-    border-radius: 32px;
-}
-
 
 .deha {
     padding-right: 5px;

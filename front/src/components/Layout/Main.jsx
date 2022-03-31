@@ -6,7 +6,7 @@ import './Main.css'
 const Main = () => {
 
   return (
-    <div className='Container'>
+    <div className='container'>
             {/* {placeRow} */}
             <PlacesRow/>
     </div>

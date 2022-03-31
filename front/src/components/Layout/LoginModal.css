@@ -16,7 +16,7 @@
     animation: modal-bg-show 0.3s;
 }
 
-.logmodal > .section-login {
+.logmodal > .section__login {
     padding: 5px 0px 8px 0px;
     animation: modal-show 0.3s;
     width: 200px;
@@ -51,7 +51,7 @@
     border-radius: 10px;
 }
 
-.Line {
+.line {
     border-top: 1px solid #DDDDDD;
     margin: 5px auto 5px auto;
 }

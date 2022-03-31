@@ -1,5 +1,4 @@
 import React, { useState, useEffect} from 'react';
-import Accom from './Accom';
 import List from './List';
 
 const ACCOM = [
@@ -40,7 +39,7 @@ const Reserve = () => {
 
   return (
 
-      <div className="accomsList">
+      <div>
         <List click={reserveHandler} />
       </div>
 

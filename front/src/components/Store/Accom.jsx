@@ -1,4 +1,4 @@
-import React , { useContext, useState} from "react";
+import React , {useState} from "react";
 import './Accom.css'
 import FavoriteBorderSharpIcon from '@mui/icons-material/FavoriteBorderSharp';
 import FavoriteSharpIcon from '@mui/icons-material/FavoriteSharp';
@@ -12,23 +12,23 @@ const Accom = (props) => {
   };
 
   return (
-    <div className="accomAccom">
-      <div className="borderTop"/>
+    <div className="accom__accom">
+      <div className="border__top"/>
       <div onClick={props.click} className="accoms">
-        <div className="accomImages"> 
-          <img className="accomImage" src="https://yaimg.yanolja.com/v5/2022/03/02/17/1280/621fa2ba34e367.82549922.jpg" />
+        <div className="accom__images"> 
+          <img className="accom__image" src="https://yaimg.yanolja.com/v5/2022/03/02/17/1280/621fa2ba34e367.82549922.jpg" />
         </div>
         <div className="accom__info">
           <div className="accom__info__top">
-              <h3 className="accomName">{props.accommodationName}</h3>
-              <div className="heartButton" onClick={handleToggle}>
+              <h3 className="accom__name">{props.accommodationName}</h3>
+              <div className="heart__button" onClick={handleToggle}>
                 {isActive ? <FavoriteBorderSharpIcon /> : <FavoriteSharpIcon />}
               </div>
           </div>
-          <div className="thinLine"/>
-          <div className="accomDescription">{props.address}</div>
-          <div className="accomPhoneNumber">☎ {props.phoneNumber}</div>
-          <div className="borderBottom"/>
+          <div className="thin__line"/>
+          <div className="accom__description">{props.address}</div>
+          <div className="accom__phoneNumber">☎ {props.phoneNumber}</div>
+          <div className="border__bottom"/>
         </div>
       </div>
     </div>

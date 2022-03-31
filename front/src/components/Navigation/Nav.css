@@ -1,4 +1,4 @@
-.navicontainer {
+.navi__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,12 +9,12 @@
     width: 100%;
 }
 
-.naviEmpty {
+.navi__empty {
     margin-left: 70px;
 }
 
 /*Title*/
-.navicontainer .storeTitle {
+.navi__container .store__title {
     float: left;
     font-size: 30px;
     margin: 15px 0 15px 0px;
@@ -26,7 +26,7 @@
 }
 
 /*Navigation*/
-.naviContent {
+.navi__content {
     padding: 9px 30px 9px 30px;
     font-weight: 800;
     font-size: 12px;
@@ -36,16 +36,16 @@
     background-color: white;
 }
 
-.naviContent#navi2 {
+.navi__content#navi2 {
     padding: 0;
 }
 
-.naviContent:hover:not(#navi2) {
+.navi__content:hover:not(#navi2) {
     background-color: #EBEBEB;
     border-radius: 32px;
 }
 
-.naviContent .naviInput {
+.navi__content .navi__input {
     border: 0;
     padding: 0;
     font-size: 14px;
@@ -59,28 +59,28 @@
     background-color: inherit;
 }
 
-.naviContent > input {
+.navi__content > input {
     border: none;
     padding: 10px;
     outline-width: 0;
 }
 
-.naviInput:focus {
+.navi__input:focus {
     outline:none;
 }
 
-.naviLine {
+.navi__line {
     align-self: center;
     border-right: 1px solid #DDDDDD;
     height: 32px !important;
     flex: 0 0 0 ;
 }
 
-.naviCenter #label4 {
+.navi__center #label4 {
     padding-right: 40px;
 }
 
-.naviCenter .naviSearch {
+.navi__center .navi__search {
     color:white;
     background-color: #FF385C;
     border-radius: 2rem;
@@ -89,13 +89,13 @@
     position: relative;
 }
 
-.naviRight {
+.navi__right {
     display: flex;
     align-items: center;
     margin-right: 150px;
 }
 
-.naviLang {
+.navi__lang {
     cursor:pointer;
     border-radius: 2rem;
     padding: 11px;
@@ -104,19 +104,19 @@
     margin: 4px;
 }
 
-.naviLang:hover {
+.navi__lang:hover {
     background-color: rgba(185, 184, 184, 0.12);
     border-radius: 32px;
 }
 
-.naviSearch {
+.navi__search{
     cursor:pointer;
     width: 24px;
     height: 23px;
 }
 
 @media screen and (min-width: 1718px){
-    .naviCenter {
+    .navi__center {
         display: flex;
         flex: 1;
         max-width: fit-content;
@@ -133,7 +133,7 @@
 }
 
 @media screen and (max-width: 1717px){
-    .naviCenter {
+    .navi__center {
         display: flex;
         flex: 1;
         max-width: fit-content;
@@ -149,7 +149,7 @@
 }
 
 @media screen and (max-width: 1568px){
-    .naviCenter {
+    .navi__center {
         display: flex;
         flex: 1;
         max-width: fit-content;
@@ -171,7 +171,7 @@
 }
 
 @media screen and (max-width: 1568px){
-    .naviContent {
+    .navi__content {
         padding: 9px 30px 9px 30px;
         font-weight: 800;
         font-size: 12px;
@@ -183,13 +183,13 @@
 }
 
 @media screen and (max-width: 1276px){
-    .naviCenter {
+    .navi__center {
         display: none;
     }
 }
 
 @media screen and (max-width: 1390px){
-    .naviCenter #label4 {
+    .navi__center #label4 {
         padding-right: 20px;
     }
 }

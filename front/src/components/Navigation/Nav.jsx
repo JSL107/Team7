@@ -15,7 +15,7 @@ const Nav = () => {
   const [letter, setLetter] = useState(localStorage.getItem("위치"));
   
   const locationData = () => {
-    let text = document.getElementById('naviInput').value;
+    let text = document.getElementById('navi__input').value;
     setLocation(localStorage.setItem("위치", text));
     setLetter(text);
   }
@@ -23,32 +23,32 @@ const Nav = () => {
   localStorage.setItem("총사람수",0);
   
   return (
-    <div className='navicontainer'>
-      <div className="naviEmpty"/>
+    <div className='navi__container'>
+      <div className="navi__empty"/>
 
       <a href='/'>
-        <img className="storeTitle"
+        <img className="store__title"
           src={image} alt="Seven stay title" />
       </a>
 
       {/* 네비게이션 예약 부분*/}
-      <div className='naviCenter'>
-        <div className='naviContent' id='navidnlcl'>
-          <div className='naviLocation'>위치</div>
-          <input id="naviInput" className="naviInput" placeholder='어디로 여행가세요?' onKeyUp={locationData} defaultValue={letter}></input>
+      <div className='navi__center'>
+        <div className='navi__content' id='navidnlcl'>
+          <div className='navi__location'>위치</div>
+          <input id="navi__input" className="navi__input" placeholder='어디로 여행가세요?' onKeyUp={locationData} defaultValue={letter}></input>
         </div>
-        <div className="naviLine" />
+        <div className="navi__line" />
 
-        <div className='naviContent' id="navi2" >   
+        <div className='navi__content' id="navi2" >   
           <Calender></Calender>
         </div>
-        <div className="naviLine" />
+        <div className="navi__line" />
 
-        <div className='naviContent' id="label4">
+        <div className='navi__content' id="label4">
           <Guest></Guest> 
         </div>
 
-        <div className='naviSearch'>
+        <div className='navi__search'>
           <a href="../Store/Reserve">
             <Button type="submit" onClick={locationData}></Button>
           </a>
@@ -56,8 +56,8 @@ const Nav = () => {
       </div>
 
       {/* 네비게이션 로그인 부분*/}
-      <div className='naviRight'>
-        <div className='naviLang'>
+      <div className='navi__right'>
+        <div className='navi__lang'>
           <LanguageIcon />
         </div>
 
