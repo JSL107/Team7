@@ -21,7 +21,9 @@ public class OrderServiceImpl implements OrderService{
     @Override
     public void insertOrder(OrderDTO orderDTO) {
 
-        Accommodation accommodation = accommodationRepository.findById(orderDTO.getId());
+        Accommodation accommodation = accommodationRepository.findByAccommodationName(orderDTO.getAccommodationName());
+        System.out.println("OrderDTO는 null ?" + orderDTO);
+        System.out.println("accmmodation은 null ? : "+accommodation);
 
         // Order 엔티티 생성
         Order order = new Order();

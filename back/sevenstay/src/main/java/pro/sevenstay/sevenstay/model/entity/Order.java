@@ -30,12 +30,12 @@ public class Order {
     @Column(name = "ORDER_PEOPLE")
     private String people;
 
+    @Column(name = "Accommodation_name")
+    private String accommodationName;
+
     @ManyToOne
     @JoinColumn(name = "Accommodation_ID")
     private Accommodation accomodation;
-
-    @Column(name= "ACCOMMODATION_NAME")
-    private String accomodationName;
 
     public Long getId() {
         return id;
@@ -77,6 +77,16 @@ public class Order {
         this.people = people;
     }
 
+    
+
+    public String getAccommodationName() {
+        return accommodationName;
+    }
+
+    public void setAccommodationName(String accommodationName) {
+        this.accommodationName = accommodationName;
+    }
+
     public Accommodation getAccomodation() {
         return accomodation;
     }
@@ -85,12 +95,6 @@ public class Order {
         this.accomodation = accomodation;
     }
 
-    public String getAccomodationName() {
-        return accomodationName;
-    }
 
-    public void setAccomodationName(String accomodationName) {
-        this.accomodationName = accomodationName;
-    }
 
 }

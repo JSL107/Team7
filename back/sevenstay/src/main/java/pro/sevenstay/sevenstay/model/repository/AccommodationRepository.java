@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import pro.sevenstay.sevenstay.model.entity.Accommodation;
 
 public interface AccommodationRepository extends JpaRepository<Accommodation, Long> {
-    Accommodation findById(Long id);
+    Accommodation findByAccommodationName(String AccommodationName);
 }

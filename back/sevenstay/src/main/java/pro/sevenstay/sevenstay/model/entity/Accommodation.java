@@ -15,6 +15,7 @@ public class Accommodation {
     private Long id;
     @Column(name = "Accommodation_city")
     private String city;
+    @Column(name = "Accommodation_Name")
     private String accommodationName;
     @Column(name = "Accommodation_address")
     private String address;

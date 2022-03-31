@@ -13,23 +13,29 @@ const ACCOM = [
 
 const BASE_URL = 'http://localhost:8090/accommodation/get';
 
-const List = (click) => {
+const List = (click,data) => {
+    const [input, setInput] = useState();
+    
+    const passData =(input)=> {
+        setInput(data.input);
+    }
 
     const [lists, setLists] = useState(ACCOM);
 
     useEffect(() => {
         console.log('호출');
         const fetchAccoms = async () => {
-        const response = await fetch(BASE_URL);
-
-        console.log(response.ok);
-        const responseData =  await response.json();
-
-        const listsData = [];
-
-        for (const key in responseData) {
-
-            if(localStorage.getItem("위치")==responseData[key].city){
+            const response = await fetch(BASE_URL);
+            
+            console.log(response.ok);
+            const responseData =  await response.json();
+            
+            const listsData = [];
+            
+            for (const key in responseData) {
+                
+                localStorage.setItem("업소명", responseData[key].accommodationName);
+            if(localStorage.getItem("위치")===responseData[key].city){
                 listsData.push({
                     id: key,
                     city: responseData[key].city,
@@ -37,7 +43,7 @@ const List = (click) => {
                     address: responseData[key].address,
                     phoneNumber: responseData[key].phoneNumber,
                 });
-            } else if(localStorage.getItem("위치")==null) {
+            } else if(localStorage.getItem("위치")===null) {
                 listsData.push({
                     id: key,
                     city: responseData[key].city,
@@ -45,7 +51,6 @@ const List = (click) => {
                     address: responseData[key].address,
                     phoneNumber: responseData[key].phoneNumber,
                 });}
-            console.log(responseData[key].city);
         }
 
         setLists(listsData);
@@ -56,10 +61,9 @@ const List = (click) => {
         })
     }, []);
 
-    console.log(lists);
 
     const accomsList = lists.map((list) => (
-        <Accom click={click.click}
+        <Accom click={click.click} data = {passData}
           key={list.id}
           id={list.id}
           city={list.city}

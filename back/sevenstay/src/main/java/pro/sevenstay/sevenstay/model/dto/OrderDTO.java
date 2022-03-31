@@ -6,23 +6,17 @@ public class OrderDTO {
     private String city;
     private String checkIn;
     private String checkOut;
-
     private String people;
-
     private String accommodationName;
-    private Long id;
 
     private Accommodation accommodation;
-   
 
-    public OrderDTO(String city, String checkIn, String checkOut, String people, String accommodationName, Long id ) {
+    public OrderDTO(String city, String checkIn, String checkOut, String people, String accommodationName) {
         this.city = city;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
         this.people = people;
-
-        this.accommodationName=accommodationName;
-        this.id=id;
+        this.accommodationName = accommodationName;
     }
 
     public String getCity() {
@@ -73,18 +67,13 @@ public class OrderDTO {
         this.accommodation = accommodation;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     @Override
     public String toString() {
-        return "OrderDTO [checkIn=" + checkIn + ", checkOut=" + checkOut + ", city=" + city + ", people=" + people
-                + "]";
+        return "OrderDTO [accommodation=" + accommodation + ", accommodationName=" + accommodationName + ", checkIn="
+                + checkIn + ", checkOut=" + checkOut + ", city=" + city + ", people=" + people + "]";
     }
+
+    
+
 
 }
