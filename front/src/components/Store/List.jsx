@@ -17,7 +17,6 @@ const List = (click) => {
 
     const [lists, setLists] = useState(ACCOM);
 
-
     useEffect(() => {
         console.log('호출');
         const fetchAccoms = async () => {
@@ -25,10 +24,11 @@ const List = (click) => {
 
         console.log(response.ok);
         const responseData =  await response.json();
-        // console.log(responseData);
 
         const listsData = [];
+
         for (const key in responseData) {
+
             if(localStorage.getItem("위치")==responseData[key].city){
                 listsData.push({
                     id: key,
@@ -36,16 +36,15 @@ const List = (click) => {
                     accommodationName: responseData[key].accommodationName,
                     address: responseData[key].address,
                     phoneNumber: responseData[key].phoneNumber,
-                    });
+                });
             } else if(localStorage.getItem("위치")==null) {
                 listsData.push({
-                id: key,
-                city: responseData[key].city,
-                accommodationName: responseData[key].accommodationName,
-                address: responseData[key].address,
-                phoneNumber: responseData[key].phoneNumber,
+                    id: key,
+                    city: responseData[key].city,
+                    accommodationName: responseData[key].accommodationName,
+                    address: responseData[key].address,
+                    phoneNumber: responseData[key].phoneNumber,
                 });}
-            
             console.log(responseData[key].city);
         }
 
@@ -58,6 +57,7 @@ const List = (click) => {
     }, []);
 
     console.log(lists);
+
     const accomsList = lists.map((list) => (
         <Accom click={click.click}
           key={list.id}

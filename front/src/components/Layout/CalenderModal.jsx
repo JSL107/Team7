@@ -30,17 +30,13 @@ const CalenderModal = (props) => {
                             startDate={startDate}
                             endDate={endDate}
                             dateFormat="M월 d일"
-                            onSelect ={(date)=>{  
-                                selectedDate(date);                                            
-                            }}
-                            onChange={(date) => { 
-                                setDateRange(date);
-                            }}
+                            onSelect ={(date)=>{selectedDate(date);}}
+                            onChange={(date) => {setDateRange(date);}}
                             disabledKeyboardNavigation
                             monthsShown={2}
                             isClearable={true}
                             inline
-                            />
+                        />
                     </main>
 
                     <footer>
@@ -49,15 +45,10 @@ const CalenderModal = (props) => {
                         </button>
                     </footer>
 
-
                 </section>
-
-
             ) : null}
-            
         </div>
-
-)
+    )
     
 }
 

@@ -16,20 +16,10 @@
 .bannerText {
     position: absolute;
     top: 80%;
-    /*right: 60%;*/
     left: 20%;
     padding: 12px 24px;
     transform: translate(10%, -50%);
     color: white;
-
-    /* display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    right: 60%;
-    left: 10%;
-    padding: 12px 24px;
-    transform: translate(0%, -200%);
-    color: white;  */
 }
 
 .bannerText h1 {
@@ -40,4 +30,3 @@
     font-size: 1.2rem;
     font-size: 20px;
 }
-

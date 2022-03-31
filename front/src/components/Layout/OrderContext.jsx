@@ -7,5 +7,4 @@ const OrderContext = React.createContext({
     removeItem: (id) => {}
 });
 
-
 export default OrderContext

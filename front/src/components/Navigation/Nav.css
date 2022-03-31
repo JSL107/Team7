@@ -1,13 +1,12 @@
 .navicontainer {
     display: flex;
-    justify-content: space-between; /**/
+    justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     background-color: #273746;
     z-index: 100;
     width: 100%;
-    /* text-align: left; */
 }
 
 .naviEmpty {
@@ -27,20 +26,6 @@
 }
 
 /*Navigation*/
-.navi {
-    color: white;
-    padding: 8px 16px;
-    float: right;
-    width: auto;
-    border: none;
-    font-size: 15px;
-    white-space: nowrap;
-    text-align: center;
-    outline: 0;
-    display: inline-block;
-    overflow: hidden;
-}
-
 .naviContent {
     padding: 9px 30px 9px 30px;
     font-weight: 800;
@@ -95,7 +80,6 @@
     padding-right: 40px;
 }
 
-
 .naviCenter .naviSearch {
     color:white;
     background-color: #FF385C;
@@ -108,7 +92,6 @@
 .naviRight {
     display: flex;
     align-items: center;
-/*    width: 11vw;*/
     margin-right: 150px;
 }
 
@@ -121,24 +104,6 @@
     margin: 4px;
 }
 
-.naviRb {
-    border-radius: 2rem;
-    border:0;
-    cursor:pointer;
-    user-select: none;
-    padding: 10px;
-    display: flex;
-    height: 43px;
-    width: 80px;
-    -webkit-box-align: center;
-    appearance: none;
-    display: inline-flex;
-}
-
-.naviRb:hover {
-    background-color: #FF385C;
-}
-
 .naviLang:hover {
     background-color: rgba(185, 184, 184, 0.12);
     border-radius: 32px;
@@ -148,16 +113,6 @@
     cursor:pointer;
     width: 24px;
     height: 23px;
-}
-
-.deha {
-    padding-right: 5px;
-    align-items: center;
-}
-
-.account {
-    padding-left: 5px;
-    align-items: center;
 }
 
 @media screen and (min-width: 1718px){

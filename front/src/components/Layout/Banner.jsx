@@ -1,5 +1,4 @@
 import React from 'react'
-import Reservation from './Reservation'
 import './Banner.css'
 
 const Banner = () => {
@@ -12,7 +11,6 @@ const Banner = () => {
         <div className='bannerText'>
             <h1>Seven Stay</h1>
             <p>We wish your 7days in week would be a like travel. Also wish your life be as happy as a trip. </p>
-            <Reservation/>
         </div>
     </div>
   )

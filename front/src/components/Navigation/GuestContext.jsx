@@ -6,5 +6,4 @@ const GuestContext = React.createContext({
     addItem: (item) => {},
 });
 
-
 export default GuestContext

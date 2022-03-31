@@ -11,7 +11,6 @@ const Guest = () => {
   };
   const closeModal = () => {
     setModalOpen(false);
-    // localStorage.clear();
   };
 
   const [count, setCount] = useState("게스트 추가");

@@ -7,12 +7,6 @@
     margin: 0 auto;
 }
 
-.borderTop {
-    margin: 0 auto;
-    border-top: 1px solid #EBEBEB;
-    width: 49%;
-}
-
 .accomImages {
     width: 210px;
     height: 131.25px;
@@ -71,4 +65,10 @@
     color: #4a69bd;
     font-size: 1.25rem;
     text-align: right;
+}
+
+.borderTop {
+    margin: 0 auto;
+    border-top: 1px solid #EBEBEB;
+    width: 49%;
 }

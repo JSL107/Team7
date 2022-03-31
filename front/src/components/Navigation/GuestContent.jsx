@@ -1,7 +1,9 @@
 import React , { useState } from 'react';
 import './GuestModal.css'
 
+
 const GuestContent = (props) => {
+
     const { open, close } = props;
 
     const [counterPeople, setCounterPeople] = useState(0);
@@ -15,7 +17,7 @@ const GuestContent = (props) => {
       setCounterPeople(counterPeople-1);
     }
   
-    const increaseNumber =()=>{
+    const increaseNumber =() => {
       setCounterPeople(counterPeople+1);
     }
   
@@ -24,7 +26,6 @@ const GuestContent = (props) => {
     const countPeople = (people) => {
       props.people(people);
     }
-  
   
     return (
       <div className={open ? 'openModal modal' : 'modal'}>
@@ -36,17 +37,12 @@ const GuestContent = (props) => {
             </div>
   
             <main>
-
               <div className='modalCount'>
                 <p className='modalAdult'>성인</p>
                 <div className='modalCountNumber'>
-                  <button id='decrease' onClick={ decreaseNumber }>
-                     - 
-                  </button>
+                  <button id='decrease' onClick={decreaseNumber} > - </button>
                   <p id='numberPeople'>{counterPeople}</p>
-                  <button id='increase' onClick={increaseNumber} >
-                     + 
-                  </button>
+                  <button id='increase' onClick={increaseNumber} > + </button>
                 </div>
               </div>
   
@@ -59,7 +55,6 @@ const GuestContent = (props) => {
                 </div>
               </div>
   
-              
               <div className='modalCount'>
                 <p className='modalAdult'>유아</p>
                 <div className='modalCountNumber'>
@@ -69,7 +64,6 @@ const GuestContent = (props) => {
                 </div>
               </div>
   
-  
               <div className='modalCount'>
                 <p className='modalAdult'>반려동물</p>
                 <div className='modalCountNumber'>
@@ -78,7 +72,6 @@ const GuestContent = (props) => {
                   <button id='increase' onClick={ ()=>{setCounterAnimal(counterAnimal+1);}} > + </button>
                 </div>
               </div>
-  
             </main>
   
             <footer>
@@ -91,6 +84,7 @@ const GuestContent = (props) => {
         ) : null}
       </div>
     )
+
 }
 
 export default GuestContent

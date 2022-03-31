@@ -9,16 +9,13 @@ const ACCOM = [
         checkOut: localStorage.getItem("체크아웃날짜"),
         people: localStorage.getItem("총사람수") ,
     },
-
 ];
+
 const BASE_URL = 'http://localhost:8090/accommodation';
 
 const Reserve = () => {
     const [lists, setLists] = useState(ACCOM);
     const [location, setLocation] = useState(localStorage.getItem("위치"));
-
-
-
 
     const reserveHandler = async () => {
       await fetch(BASE_URL, 
@@ -42,14 +39,11 @@ const Reserve = () => {
     }
 
   return (
-    <>
-      <div>
-        <button className="ReserveBtn" onClick={reserveHandler}>예약하기</button>
-      </div>
+
       <div className="accomsList">
         <List click={reserveHandler} />
       </div>
-    </>
+
   )
 }
 

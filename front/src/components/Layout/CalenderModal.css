@@ -34,7 +34,6 @@
     margin : 10px 0;
     width: auto;
     text-align: center;
-    
 }
 
 .modal > .section-datepicker > main {
@@ -87,33 +86,3 @@
   opacity: 1;
   }
 }
-
-/* react Date picker css 부분 */
-/* .react-datepicker {
-    font-size: 1.5em;
-  }
-  .react-datepicker__header {
-    padding-top: 1.0em;
-  }
-  .react-datepicker__month {
-    margin: 0.4em 1em;
-  }
-  .react-datepicker__day-name,
-  .react-datepicker__day {
-    width: 3.0em;
-    line-height: 2.0em;
-    margin: 0.166em;
-  }
-  .react-datepicker__current-month {
-    font-size: 1em;
-  }
-  
-  .react-datepicker__navigation { 
-    top: 1em;
-    line-height: 1.7em;
-    border: 0.45em solid transparent;
-  } */
- 
-
-
-  

@@ -4,6 +4,7 @@ import DehazeIcon from '@mui/icons-material/Dehaze';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import './Login.css'
 
+
 const Login = () => {
 
     const [modalOpen, setModalOpen] = useState(false);
@@ -14,8 +15,9 @@ const Login = () => {
     const closeModal = () => {
         setModalOpen(false);
     };
+
     return (
-        <>
+      <>
         <button type='button' className='naviRb' onClick={openModal}>
           <div className='deha'>
             <DehazeIcon />
@@ -28,10 +30,7 @@ const Login = () => {
         <div>
           <LoginModal open={modalOpen} close={closeModal}></LoginModal>
         </div>
-
-        </>
-        
-
+      </>    
     )
 }
 

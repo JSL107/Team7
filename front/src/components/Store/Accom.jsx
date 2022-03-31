@@ -28,6 +28,7 @@ const Accom = (props) => {
           <div className="thinLine"/>
           <div className="accomDescription">{props.address}</div>
           <div className="accomPhoneNumber">☎ {props.phoneNumber}</div>
+          <div className="borderBottom"/>
         </div>
       </div>
     </div>

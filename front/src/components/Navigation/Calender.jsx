@@ -33,15 +33,12 @@ const Calender = () => {
   }
  
   return (
-
     <div className="calender">
-
       <div className="datePicker" id="in">
         <div className='naviCheckin' onClick={openModal}>체크인</div>
         <CalenderModal open={modalOpen} close={closeModal} dates={setTransDate}/>
         <div id="datePickerText1" type="text" className='datePickerText' onClick={openModal}> {localStorage.getItem('체크인날짜') ?? "날짜 선택"}</div>
       </div>
-
       <div className="naviLine" />
 
       <div className="datePicker" id="out">
@@ -51,9 +48,7 @@ const Calender = () => {
         <div className="naviDate">
         </div>
       </div>
-
     </div>
-
   )
 }
 export default Calender

@@ -1,13 +1,4 @@
 /*Modal 기능*/
-/* .modal {
-    position: absolute; 
-    top: 240px;
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    display: none; 
-} */
-
 .modalCountNumber button {
     outline: none;
     cursor: pointer;
@@ -47,13 +38,6 @@
     padding: 10px 0;
 }
 
-/*.modal > section > header {
-     position: relative;
-    padding: 16px 64px 16px 16px;
-    background-color: #f1f1f1;
-    font-weight: 700; 
-}*/
-
 .modal > section > header button {
     position: absolute;
     top: 15px;
@@ -76,11 +60,9 @@
 .modal .modalCount {
     display: flex;
     justify-content: space-between;
-    /* width: 300px; */
     width: auto;
     height: 40px;
     padding: 16px 5px;
-    
 }
 
 .modal .modalCount:not(:last-child) {

@@ -8,10 +8,6 @@ import OrderItem from './OrderItem'
 const BASE_URL = 'http://localhost:8090/api/v1/orders';
 
 const Button = () => {
-
-    /*const {location, date, people, btnClick } = props;*/
-
-
     return (     
     <div>
         <SearchIcon type={'button'}></SearchIcon>

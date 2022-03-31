@@ -7,7 +7,6 @@ const LoginModal = (props) => {
   const { open , close } = props;
 
   return (
-
     <div className={open ? 'openModal logmodal' : 'logmodal'}>
       {open ? (
 
@@ -35,7 +34,6 @@ const LoginModal = (props) => {
         </section>
       ) : null}
     </div>
-
   )
 
 }
