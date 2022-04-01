@@ -64,7 +64,7 @@ json
   "checkIn": "2022-03-31",
   "checkOut": "2022-04-02",
   "people": "2명",
-  "accommodation_name": "ㅇㅇ호텔"
+  "accommodationName": "위(we)호텔"
 }
 ```
 
