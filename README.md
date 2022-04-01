@@ -1,4 +1,4 @@
-# React-Mini-project
+# 🏠Seven Stay
 
 ## 팀원 구성
   - :bear: 김은혁
@@ -33,7 +33,7 @@
 <br>
 
 ## 동작화면
-[gif?]
+[sevenstay화면](https://user-images.githubusercontent.com/97449025/161179165-79990045-f845-48a8-b205-af14c0812d82.gif)
 
 ## Lighthouse
 ![image](https://user-images.githubusercontent.com/95362504/161176201-fbdbfdde-2a3a-4358-a60f-a7943b8eee0b.png)
