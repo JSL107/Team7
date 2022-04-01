@@ -42,16 +42,21 @@
 ![image](https://user-images.githubusercontent.com/95362504/161176520-be61bac2-42d4-4f15-bc97-11dd31c6399e.png)
 
 ## POSTMAN
-```
+
 GET
+```
 list 받아오기
 http://localhost:8090/accommodation/get
+```
 
 POST
+```
 order 올리기
 http://localhost:8090/accommodation
+```
 
 Bodyraw (json)
+```
 json
 {
   "id": 1,
