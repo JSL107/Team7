@@ -42,7 +42,26 @@
 ![image](https://user-images.githubusercontent.com/95362504/161176520-be61bac2-42d4-4f15-bc97-11dd31c6399e.png)
 
 ## POSTMAN
-[image]
+```
+GET
+list 받아오기
+http://localhost:8090/accommodation/get
+
+POST
+order 올리기
+http://localhost:8090/accommodation
+
+Bodyraw (json)
+json
+{
+  "id": 1,
+  "city": "제주",
+  "checkIn": "2022-03-31",
+  "checkOut": "2022-04-02",
+  "people": "2명",
+  "accommodation_name": "ㅇㅇ호텔"
+}
+```
 
 ## 트러블 슈팅
 1. 카카오MAP API 작성중 코드에  /*global kakao*/ 선언하지 않으면 오류 발생 하는점 
