@@ -22,7 +22,7 @@
 ## 🖥 실행화면 
 
  ### main page
-![image](https://user-images.githubusercontent.com/95362504/161176405-898f80fa-7927-4e49-9131-5c7688f91583.png)
+![image](https://user-images.githubusercontent.com/97449025/161179482-06b5c6da-6ba5-4ca3-b609-7a29a0e6815c.png)
 
 
 <br>
